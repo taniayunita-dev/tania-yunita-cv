@@ -58,7 +58,7 @@ export function EngineeringApproachSection() {
               key={approach.title}
               className="p-6 sm:p-7"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-zinc-50">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-card">
                 <Icon
                   size={19}
                   className="text-accent"

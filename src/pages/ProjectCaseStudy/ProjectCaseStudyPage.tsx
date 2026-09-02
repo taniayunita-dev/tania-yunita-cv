@@ -5,6 +5,7 @@ import { projects } from '@/features/projects/data/projects.data';
 import { Badge } from '@/components/ui/Badge';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Container } from '@/components/ui/Container';
+import { SEO } from '@/components/seo/SEO';
 
 export function ProjectCaseStudyPage() {
     const { projectId } = useParams();
@@ -14,6 +15,7 @@ export function ProjectCaseStudyPage() {
     );
 
     if (!project) {
+
         return (
             <section className="py-32">
                 <Container>
@@ -39,8 +41,16 @@ export function ProjectCaseStudyPage() {
         );
     }
 
+    const seoTitle = `${project.title} | Frontend Developer`;
+
+    const seoDescription = project.shortDescription;
+
     return (
         <article>
+            <SEO
+                title={seoTitle}
+                description={seoDescription}
+            />
             {/* Hero */}
             <section className="border-b border-border">
                 <Container>
@@ -79,7 +89,7 @@ export function ProjectCaseStudyPage() {
             {/* Preview */}
             <section className="py-12 sm:py-16">
                 <Container>
-                    <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-zinc-100">
+                    <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-card">
                         {project.image ? (
                             <img
                                 src={project.image}
@@ -147,7 +157,7 @@ export function ProjectCaseStudyPage() {
             </section>
 
             {/* Features */}
-            <section className="bg-zinc-50 py-16 sm:py-20 lg:py-24">
+            <section className="bg-card py-16 sm:py-20 lg:py-24">
                 <Container>
                     <div className="max-w-2xl">
                         <p className="text-sm font-semibold tracking-wide text-accent uppercase">

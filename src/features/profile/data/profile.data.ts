@@ -3,7 +3,7 @@ export const profile = {
   role: 'Frontend Developer',
 
   headline:
-    'Building thoughtful, responsive web experiences with React and TypeScript.',
+    'I build thoughtful, responsive web experiences with React and TypeScript.',
 
   description:
     'Frontend Developer with 3+ years of professional experience building responsive web applications and user-focused interfaces.',

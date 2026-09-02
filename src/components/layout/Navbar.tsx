@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { profile } from '@/features/profile/data/profile.data';
 import { Container } from '@/components/ui/Container';
 

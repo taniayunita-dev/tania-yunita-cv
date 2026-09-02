@@ -27,7 +27,7 @@ export function ProjectCard({
             {/* Project image */}
             <div
                 className={[
-                    'relative overflow-hidden bg-zinc-100',
+                    'relative overflow-hidden bg-card',
                     featured ? 'aspect-[16/8]' : 'aspect-video',
                 ].join(' ')}
             >

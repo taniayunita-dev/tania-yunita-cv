@@ -2,10 +2,15 @@ import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import { Container } from '@/components/ui/Container';
+import { SEO } from '@/components/seo/SEO';
 
 export function NotFoundPage() {
     return (
         <section className="py-32">
+            <SEO
+                title="Page Not Found | Frontend Developer"
+                description="The page you're looking for doesn't exist or may have been moved."
+            />
             <Container>
                 <div className="mx-auto max-w-xl text-center">
                     <p className="text-sm font-semibold tracking-wide text-accent uppercase">

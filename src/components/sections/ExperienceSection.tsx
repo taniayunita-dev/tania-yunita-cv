@@ -8,7 +8,7 @@ export function ExperienceSection() {
             eyebrow="Experience"
             title="Professional experience"
             description="A selection of my professional frontend development experience."
-            className="bg-zinc-50"
+            className="bg-card"
         >
             <div className="max-w-4xl">
                 <ExperienceList />

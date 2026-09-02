@@ -16,7 +16,7 @@
   --color-primary: #18181b;
   --color-primary-foreground: #fafafa;
 
-  --color-accent: #6366f1;
+  --color-accent: #4f46e5;
   --color-accent-foreground: #ffffff;
 
   --color-danger: #dc2626;
@@ -105,4 +105,19 @@ button {
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

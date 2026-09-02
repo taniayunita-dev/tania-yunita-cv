@@ -25,11 +25,11 @@ export function HeroSection() {
                         </p>
 
                         <h1
+
                             id="hero-title"
                             className="max-w-4xl text-4xl font-semibold tracking-[-0.03em] text-foreground sm:text-5xl lg:text-7xl"
                         >
-                            I build thoughtful, responsive web experiences with React and
-                            TypeScript.
+                            {profile.headline}
                         </h1>
 
                         <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
