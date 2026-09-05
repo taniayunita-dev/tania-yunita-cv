@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { profile } from '@/features/profile/data/profile.data';
 import { Container } from '@/components/ui/Container';
+import { Languages } from 'lucide-react';
+import { useLanguage } from '@/hooks/useLanguage';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const navItems = [
     { label: 'About', href: '#about' },
@@ -12,6 +15,9 @@ const navItems = [
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const { language, toggleLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     useEffect(() => {
         if (!isMenuOpen) {
@@ -62,6 +68,61 @@ export function Navbar() {
                             </a>
                         ))}
                     </nav>
+                    <div
+                        aria-hidden="true"
+                        className="mx-2 h-5 w-px bg-border"
+                    />
+
+                    <button
+                        type="button"
+                        onClick={toggleLanguage}
+                        className={[
+                            'inline-flex items-center gap-2',
+                            'rounded-lg border border-border',
+                            'bg-background/80',
+                            'px-3 py-2',
+                            'text-xs font-semibold',
+                            'text-foreground',
+                            'transition-all duration-200',
+                            'hover:border-accent/30',
+                            'hover:bg-card',
+                        ].join(' ')}
+                        aria-label={`${t.language.switchTo}: ${language === 'en' ? 'Bahasa Indonesia' : 'English'
+                            }`}
+                    >
+                        <Languages
+                            size={15}
+                            aria-hidden="true"
+                        />
+
+                        <span
+                            className={
+                                language === 'en'
+                                    ? 'text-accent'
+                                    : 'text-muted-foreground'
+                            }
+                        >
+                            EN
+                        </span>
+
+                        <span
+                            aria-hidden="true"
+                            className="text-border"
+                        >
+                            /
+                        </span>
+
+                        <span
+                            className={
+                                language === 'id'
+                                    ? 'text-accent'
+                                    : 'text-muted-foreground'
+                            }
+                        >
+                            ID
+                        </span>
+                    </button>
+
 
                     {/* Mobile Menu Button */}
                     <button
@@ -129,6 +190,6 @@ export function Navbar() {
                     </nav>
                 )}
             </Container>
-        </header>
+        </header >
     );
 }

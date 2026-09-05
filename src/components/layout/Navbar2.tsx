@@ -1,8 +1,10 @@
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowUpRight, Languages, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { Container } from '@/components/ui/Container';
 import { profile } from '@/features/profile/data/profile.data';
+import { useLanguage } from '@/hooks/useLanguage';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const navItems = [
     { label: 'About', href: '#about' },
@@ -15,6 +17,8 @@ const navItems = [
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { language, toggleLanguage } = useLanguage();
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -53,7 +57,7 @@ export function Navbar() {
     return (
         <header className={[
             'fixed inset-x-0 top-0 z-50',
-            'px-3 sm:px-6 lg:px-8',
+            ' lg:px-8',
             'transition-all duration-500 ease-in-out',
             isScrolled ? 'pt-2' : 'pt-4',
         ].join(' ')}>
@@ -101,40 +105,83 @@ export function Navbar() {
                                         key={item.href}
                                         href={item.href}
                                         className={
-                                            isContact
-                                                ? [
-                                                    'ml-3 inline-flex items-center gap-1.5',
-                                                    'rounded-xl bg-primary px-4 py-2',
-                                                    'text-sm font-medium text-primary-foreground',
-                                                    'transition-all duration-200',
-                                                    'hover:-translate-y-0.5 hover:shadow-md',
-                                                    'focus-visible:outline-none focus-visible:ring-2',
-                                                    'focus-visible:ring-accent focus-visible:ring-offset-2',
-                                                    'focus-visible:ring-offset-background',
-                                                ].join(' ')
-                                                : [
-                                                    'rounded-lg px-3 py-2',
-                                                    'text-md font-medium text-muted-foreground',
-                                                    'transition-colors duration-200',
-                                                    'hover:bg-card hover:text-foreground',
-                                                    'focus-visible:outline-none focus-visible:ring-2',
-                                                    'focus-visible:ring-accent',
-                                                ].join(' ')
+                                            [
+                                                'rounded-lg px-3 py-2',
+                                                'text-md font-medium text-muted-foreground',
+                                                'transition-colors duration-200',
+                                                'hover:bg-card hover:text-foreground',
+                                                'focus-visible:outline-none focus-visible:ring-2',
+                                                'focus-visible:ring-accent',
+                                            ].join(' ')
                                         }
                                     >
                                         {item.label}
 
-                                        {isContact && (
+                                        {/* {isContact && (
                                             <ArrowUpRight
                                                 size={15}
                                                 aria-hidden="true"
                                                 className="transition-transform duration-200 group-hover:translate-x-0.5"
                                             />
-                                        )}
+                                        )} */}
                                     </a>
                                 );
                             })}
+                            <LanguageSwitcher />
                         </nav>
+
+
+
+
+                        {/* <button
+                            type="button"
+                            onClick={toggleLanguage}
+                            className={[
+                                'inline-flex items-center gap-2',
+                                'rounded-lg border border-border',
+                                'bg-background/80',
+                                'px-3 py-2',
+                                'text-xs font-semibold',
+                                'text-foreground',
+                                'transition-all duration-200',
+                                'hover:border-accent/30',
+                                'hover:bg-card',
+                            ].join(' ')}
+                            aria-label={`${t.language.switchTo}: ${language === 'en' ? 'Bahasa Indonesia' : 'English'
+                                }`}
+                        >
+                            <Languages
+                                size={15}
+                                aria-hidden="true"
+                            />
+
+                            <span
+                                className={
+                                    language === 'en'
+                                        ? 'text-accent'
+                                        : 'text-muted-foreground'
+                                }
+                            >
+                                EN
+                            </span>
+
+                            <span
+                                aria-hidden="true"
+                                className="text-border"
+                            >
+                                /
+                            </span>
+
+                            <span
+                                className={
+                                    language === 'id'
+                                        ? 'text-accent'
+                                        : 'text-muted-foreground'
+                                }
+                            >
+                                ID
+                            </span>
+                        </button> */}
 
                         {/* Mobile Menu Button */}
                         <button
@@ -169,7 +216,7 @@ export function Navbar() {
                     {isMenuOpen && (
                         <nav
                             id="mobile-navigation"
-                            className="border-t border-border/70 px-3 py-3 md:hidden"
+                            className="border-t border-border/70 px-3 duration-500 transition transition-discrete ease-in-out py-3 md:hidden"
                             aria-label="Mobile navigation"
                         >
                             <div className="flex flex-col gap-1">
@@ -207,6 +254,17 @@ export function Navbar() {
                                         </a>
                                     );
                                 })}
+                            </div>
+
+                            {/* Divider */}
+                            <div
+                                aria-hidden="true"
+                                className="my-3 h-px bg-border"
+                            />
+
+                            {/* Language */}
+                            <div className="px-3 py-2">
+                                <LanguageSwitcher mobile />
                             </div>
                         </nav>
                     )}
