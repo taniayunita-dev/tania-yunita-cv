@@ -14,6 +14,21 @@ const navItems = [
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         if (!isMenuOpen) return;
@@ -36,9 +51,14 @@ export function Navbar() {
     };
 
     return (
-        <header className="sticky top-0 z-50 px-3 pt-3 sm:px-6">
+        <header className={[
+            'fixed inset-x-0 top-0 z-50',
+            'px-3 sm:px-6 lg:px-8',
+            'transition-all duration-500 ease-in-out',
+            isScrolled ? 'pt-2' : 'pt-4',
+        ].join(' ')}>
             <Container className="px-0 sm:px-0 lg:px-0">
-                <div className="rounded-4xl border border-border/70 bg-background/85 shadow-xl backdrop-blur-xl">
+                <div className="rounded-4xl border border-border/70 bg-background/85 shadow-xl backdrop-blur-xl ">
                     {/* Desktop / Mobile Header */}
                     <div className="flex h-14 items-center justify-between px-3 sm:h-16 sm:px-4 lg:px-5">
                         {/* Logo */}
@@ -94,7 +114,7 @@ export function Navbar() {
                                                 ].join(' ')
                                                 : [
                                                     'rounded-lg px-3 py-2',
-                                                    'text-sm font-medium text-muted-foreground',
+                                                    'text-md font-medium text-muted-foreground',
                                                     'transition-colors duration-200',
                                                     'hover:bg-card hover:text-foreground',
                                                     'focus-visible:outline-none focus-visible:ring-2',
@@ -192,6 +212,6 @@ export function Navbar() {
                     )}
                 </div>
             </Container>
-        </header>
+        </header >
     );
 }
