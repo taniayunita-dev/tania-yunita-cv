@@ -1,42 +1,12 @@
-import { ArrowUpRight } from 'lucide-react';
+
 
 import { Container } from '@/components/ui/Container';
+import { useTranslation } from '@/hooks/useTranslation';
 
-const practiceLevels = [
-    {
-        number: '01',
-        title: 'Strong',
-        description:
-            'Areas I can confidently apply in real-world frontend development.',
-        skills: [
-            'Component Architecture',
-            'Responsive UI',
-            'Performance',
-            'Accessibility',
-        ],
-    },
-    {
-        number: '02',
-        title: 'Experienced',
-        description:
-            'Areas I have applied across projects and professional experience.',
-        skills: [
-            'API Integration',
-            'Authentication',
-            'Error Handling',
-            'State Management',
-        ],
-    },
-    {
-        number: '03',
-        title: 'Currently Developing',
-        description:
-            'Areas I am actively strengthening through hands-on practice.',
-        skills: ['Testing', 'Advanced State Architecture'],
-    },
-];
+
 
 export function HowIBuild() {
+    const { t } = useTranslation();
     return (
         <section
             id="how-i-build"
@@ -54,7 +24,7 @@ export function HowIBuild() {
                             />
 
                             <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
-                                How I Build
+                                {t.skills.eyebrow}
                             </p>
                         </div>
 
@@ -69,20 +39,21 @@ export function HowIBuild() {
                                 'sm:text-5xl',
                             ].join(' ')}
                         >
-                            How I approach frontend development.
+                            {t.skills.heading}
                         </h2>
 
                         <div className="mt-6 h-px w-12 bg-accent" />
 
                         <p className="mt-6 max-w-md text-base leading-7 text-muted-foreground">
-                            A selection of frontend practices I’m confident with,
-                            experienced in, and currently developing.
+                            {/* A selection of frontend practices I’m confident with,
+                            experienced in, and currently developing. */}
+                            {t.skills.subtext}
                         </p>
                     </header>
 
                     {/* Practice levels */}
                     <div className="space-y-4">
-                        {practiceLevels.map((level) => (
+                        {t.skills.items.map((level) => (
                             <article
                                 key={level.title}
                                 className={[
@@ -118,11 +89,11 @@ export function HowIBuild() {
                                                     </h3>
 
                                                     <p className="mt-2 max-w-lg text-sm leading-6 text-muted-foreground">
-                                                        {level.description}
+                                                        {level.desc}
                                                     </p>
                                                 </div>
 
-                                                <span
+                                                {/* <span
                                                     aria-hidden="true"
                                                     className={[
                                                         'hidden h-9 w-9 shrink-0',
@@ -137,12 +108,12 @@ export function HowIBuild() {
                                                     ].join(' ')}
                                                 >
                                                     <ArrowUpRight size={16} />
-                                                </span>
+                                                </span> */}
                                             </div>
 
                                             {/* Skill badges */}
                                             <div className="mt-6 flex flex-wrap gap-2">
-                                                {level.skills.map((skill) => (
+                                                {level.tags.map((skill) => (
                                                     <span
                                                         key={skill}
                                                         className={[

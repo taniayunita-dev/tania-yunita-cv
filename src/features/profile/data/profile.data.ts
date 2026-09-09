@@ -3,15 +3,14 @@ export const profile = {
   role: 'Frontend Developer',
 
   headline:
-    'I build thoughtful, responsive web experiences with React and TypeScript.',
+    "I build responsive, production-ready interfaces with React and TypeScript.",
 
   description:
-    'Frontend Developer with 3+ years of professional experience building responsive web applications and user-focused interfaces.',
+    'Frontend Developer with 3+ years of experience building clean, scalable, and  maintainable web applications.',
 
-  location: 'Indonesia',
+  location: 'Bekasi, Indonesia',
 
   email: 'taniayunita.dev@gmail.com',
-  whatsapp: 6281394759375,
 
   social: {
     github: 'https://github.com/taniayunita-dev',

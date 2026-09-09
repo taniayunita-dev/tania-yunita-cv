@@ -102,7 +102,7 @@ export function LanguageSwitcher({
                         aria-expanded={isOpen}
                         aria-haspopup="listbox"
                         className={[
-                            'flex h-10 items-center gap-2',
+                            'flex h-10 items-center gap-2 w-25',
                             'rounded-full border border-border',
                             'bg-card px-3',
                             'text-sm font-semibold text-foreground',
@@ -146,7 +146,7 @@ export function LanguageSwitcher({
                     aria-expanded={isOpen}
                     aria-haspopup="listbox"
                     className={[
-                        'flex h-11 items-center gap-3',
+                        'flex h-11 w-30 items-center gap-3',
                         'rounded-full border border-border',
                         'bg-card px-4',
                         'text-sm font-semibold text-foreground',
@@ -208,8 +208,10 @@ export function LanguageSwitcher({
                                 type="button"
                                 role="option"
                                 aria-selected={isActive}
-                                onClick={() =>
-                                    handleLanguageChange(item.value)
+                                onClick={() => {
+                                    handleLanguageChange(item.value);
+                                    // console.log(item.value);
+                                }
                                 }
                                 className={[
                                     'flex w-full items-center gap-3',

@@ -68,7 +68,7 @@ export function ProjectCard({
                 </div>
 
                 <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
-                    {project.shortDescription}
+                    {project.description}
                 </p>
 
                 <div className="mt-5 flex flex-wrap gap-2">

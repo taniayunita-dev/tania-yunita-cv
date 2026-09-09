@@ -1,5 +1,5 @@
 
-import { AboutSection, ExperienceSection, HeroSection, ContactSection, ProjectSection, EngineeringApproachSection, SkillsSection } from '@/components/sections';
+import { ContactSection, EngineeringApproachSection, } from '@/components/sections';
 import { SEO } from '@/components/seo/SEO';
 // import { HeroSection2 } from '@/components/sections/HeroSection2';
 import { HeroSection3 } from '@/components/sections/HeroSection3';
@@ -26,7 +26,7 @@ export function HomePage() {
             <HowIBuild />
             {/* <ProjectSection /> */}
             <EngineeringApproachSection />
-            <SkillsSection />
+            {/* <SkillsSection /> */}
             <ContactSection />
 
             {/* Skills akan ditambahkan nanti */}

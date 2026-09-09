@@ -1,7 +1,6 @@
 import type { PropsWithChildren } from 'react';
 
 import { Footer } from './Footer';
-import { Navbar } from './Navbar';
 import { Navbar as Navbar2 } from './Navbar2';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 

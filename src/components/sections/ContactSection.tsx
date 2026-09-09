@@ -1,75 +1,44 @@
 import {
     ArrowUpRight,
-    GitBranchIcon as Github,
-    Link as Linkedin,
-    Mail,
 } from 'lucide-react';
 
-import { profile } from '@/features/profile/data/profile.data';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Section } from '@/components/ui/Section';
+import { useTranslation } from '@/hooks/useTranslation';
 
-const contactLinks = [
-    {
-        label: 'Email',
-        description: 'Send me an email',
-        href: `mailto:${profile.email}`,
-        icon: Mail,
-    },
-    {
-        label: 'WhatsApp',
-        description: 'Chat me on whatsApp',
-        href: `https://wa.me/${profile.whatsapp}`,
-        icon: Mail,
-    },
-    {
-        label: 'GitHub',
-        description: 'View my code and projects',
-        href: profile.social.github,
-        icon: Github,
-        external: true,
-    },
-    {
-        label: 'LinkedIn',
-        description: 'Connect with me professionally',
-        href: profile.social.linkedin,
-        icon: Linkedin,
-        external: true,
-    },
-];
 
 export function ContactSection() {
+    const { t } = useTranslation();
     return (
         <Section
             id="contact"
-            eyebrow="Contact"
-            title="Let's work together"
-            description="I'm currently open to Frontend Developer opportunities and interesting projects."
+            eyebrow={t.contact.eyebrow}
+            title={t.contact.heading}
+        // description="I'm currently open to Frontend Developer opportunities and interesting projects."
         >
             <div className="overflow-hidden rounded-3xl border border-border bg-primary">
                 <div className="p-8 sm:p-10 lg:p-12">
                     <div className="max-w-3xl">
-                        <p className="text-sm font-medium text-zinc-400">
-                            {profile.availability}
-                        </p>
+                        {/* <p className="text-sm font-medium text-zinc-400">
+                            I'm currently open to Frontend Developer opportunities
+                        </p> */}
 
                         <h3 className="mt-4 text-3xl font-semibold tracking-tight text-primary-foreground sm:text-4xl">
-                            Have a project or opportunity in mind?
+                            {t.contact.subheading}
                         </h3>
 
                         <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-                            Whether you&apos;re looking for a frontend developer or want to
-                            discuss a project, I&apos;d be happy to hear from you.
+                            {t.contact.subtext}
                         </p>
 
                         <div className="mt-8">
                             <ButtonLink
-                                href={`mailto:${profile.email}`}
+                                href={`mailto:${t.contact.email}`}
                                 variant="secondary"
                                 size="lg"
                                 className="group"
                             >
-                                Get in touch
+                                {t.contact.cta}
                                 <ArrowUpRight
                                     size={17}
                                     aria-hidden="true"
@@ -79,8 +48,8 @@ export function ContactSection() {
                         </div>
                     </div>
 
-                    <div className="mt-12 grid border-t border-zinc-700 sm:grid-cols-4">
-                        {contactLinks.map((link) => {
+                    <div className="mt-12 grid border-t border-zinc-700 sm:grid-cols-3">
+                        {t.contact?.contactLinks?.map((link) => {
                             const Icon = link.icon;
 
                             return (
@@ -114,7 +83,7 @@ export function ContactSection() {
                                     </div>
 
                                     <p className="mt-2 text-sm text-zinc-500">
-                                        {link.description}
+                                        {link.desc}
                                     </p>
                                 </a>
                             );

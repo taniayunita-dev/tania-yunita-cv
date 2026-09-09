@@ -1,7 +1,7 @@
 import { Code2, Database, GraduationCap, MapPin, Palette, Wrench } from 'lucide-react';
 
-import { profile } from '@/features/profile/data/profile.data';
 import { Container } from '@/components/ui/Container';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const stackGroups = [
     {
@@ -27,11 +27,12 @@ const stackGroups = [
 ];
 
 export function About() {
+    const { t } = useTranslation();
     return (
         <section
             id="about"
             aria-labelledby="about-title"
-            className="py-20 sm:py-24 lg:py-32"
+            className="pb-20 pt-0 sm:py-0 lg:py-32"
         >
             <Container>
                 <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm ">
@@ -104,20 +105,22 @@ export function About() {
                                         'sm:text-5xl',
                                     ].join(' ')}
                                 >
-                                    Hi, I’m{' '}
-                                    <span className="text-accent">Tania.</span>
+                                    {t.about.greeting}{' '}
+                                    <span className="text-accent">{t.about.name}.</span>
                                 </h2>
 
                                 <div className="mt-8 max-w-xl space-y-5">
                                     <p className="text-base leading-7 text-background/90 sm:text-lg sm:leading-8">
-                                        Frontend Developer with 3+ years of experience building and
-                                        maintaining web applications using React and TypeScript.
+                                        {/* Frontend Developer with 3+ years of experience building and
+                                        maintaining web applications using React and TypeScript. */}
+                                        {t.about.p1}
                                     </p>
 
                                     <p className="text-sm leading-7 text-background/60 sm:text-base">
-                                        I translate UI designs into responsive web interfaces,
+                                        {/* I translate UI designs into responsive web interfaces,
                                         build reusable components, and integrate APIs to deliver
-                                        functional and maintainable applications.
+                                        functional and maintainable applications. */}
+                                        {t.about.p2}
                                     </p>
                                 </div>
 
@@ -136,14 +139,14 @@ export function About() {
 
                                         <div>
                                             <p className="text-xs font-semibold tracking-[0.12em] text-background/50 uppercase">
-                                                Education
+                                                {t.about.eduLabel}
                                             </p>
 
                                             <div className="mt-2 space-y-0.5 text-sm leading-6 text-background/90">
-                                                <p>Bacelor Degree</p>
-                                                <p>Informatics</p>
+                                                <p>{t.about.degree}</p>
+                                                <p>{t.about.field}</p>
                                                 <p className="text-background/60">
-                                                    Universitas Teknologi Bandung
+                                                    {t.about.university}
                                                 </p>
                                             </div>
                                         </div>
@@ -162,11 +165,11 @@ export function About() {
 
                                         <div>
                                             <p className="text-xs font-semibold tracking-[0.12em] text-background/50 uppercase">
-                                                Location
+                                                {t.about.locLabel}
                                             </p>
 
                                             <p className="mt-2 text-sm font-medium text-background/90">
-                                                {profile.location}
+                                                {t.about.location}
                                             </p>
                                         </div>
                                     </div>
@@ -178,7 +181,7 @@ export function About() {
                         <div className="bg-card p-7 sm:p-10 lg:p-12">
                             <div className="flex items-center gap-4">
                                 <h3 className="whitespace-nowrap text-xs font-semibold tracking-[0.16em] text-accent uppercase">
-                                    Stack I Work With
+                                    {t.about.stackTitle}
                                 </h3>
 
                                 <div

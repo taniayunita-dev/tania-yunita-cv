@@ -3,7 +3,8 @@ import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Container } from '@/components/ui/Container';
 import { profile } from '@/features/profile/data/profile.data';
-import BGHeroImage from '@/assets/images/hero-image.png';
+import BGHeroImage from '@/assets/images/tania-yunita-profile.png';
+import { useTranslation } from '@/hooks/useTranslation';
 
 
 const credibilityItems = [
@@ -14,6 +15,7 @@ const credibilityItems = [
 ];
 
 export function HeroSection2() {
+    const { t } = useTranslation();
     return (
         <section
             aria-labelledby="hero-title"
@@ -45,7 +47,7 @@ export function HeroSection2() {
                 aria-hidden="true"
                 className={[
                     'absolute inset-0',
-                    'bg-gradient-to-r',
+                    'bg-linear-to-r',
                     'from-background via-background/75 to-transparent',
                     'lg:from-background',
                     'lg:via-background/55',
@@ -135,7 +137,7 @@ export function HeroSection2() {
                                 'xl:text-[4.6rem]',
                             ].join(' ')}
                         >
-                            {profile.headline}
+                            {t.hero.headline}
                         </h1>
 
                         {/* Description */}

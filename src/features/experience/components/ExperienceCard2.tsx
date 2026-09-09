@@ -1,10 +1,10 @@
 import { Check } from 'lucide-react';
 
 import { Badge } from '@/components/ui/Badge';
-import type { Experience } from '../types/experience.types';
+import type { Translation } from '@/types/i18n';
 
 interface ExperienceCardProps {
-    experience: Experience;
+    experience: Translation['experience']['items'][number];
 }
 
 function getCompanyInitials(company: string) {
@@ -32,7 +32,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                 'hover:shadow-lg hover:shadow-accent/5',
             ].join(' ')}
         >
-            <div className="grid gap-7 lg:grid-cols-[220px_1fr_120px] lg:gap-8">
+            <div className="grid gap-7">
                 {/* Company / Role */}
                 <div>
                     <div className="flex items-start gap-4">
@@ -61,49 +61,51 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                     </div>
 
                     <time className="mt-5 block text-sm text-muted-foreground">
-                        {experience.duration}
+                        {experience.period}
                     </time>
                 </div>
+                <div className='grid lg:grid-cols-2'>
 
-                {/* Description + Responsibilities */}
-                <div>
-                    <p className="leading-7 text-muted-foreground">
-                        {experience.description}
-                    </p>
+                    {/* Description + Responsibilities */}
+                    <div>
+                        <p className="leading-7 text-muted-foreground">
+                            {experience.description}
+                        </p>
 
-                    <ul className="mt-5 space-y-3">
-                        {experience.responsibilities.map((responsibility) => (
-                            <li
-                                key={responsibility}
-                                className="flex gap-3 text-sm leading-6 text-muted-foreground"
-                            >
-                                <Check
-                                    size={17}
-                                    className="mt-1 shrink-0 text-accent"
-                                    aria-hidden="true"
-                                />
+                        <ul className="mt-5 space-y-3">
+                            {experience?.responsibilities?.map((responsibility) => (
+                                <li
+                                    key={responsibility}
+                                    className="flex gap-3 text-sm leading-6 text-muted-foreground"
+                                >
+                                    <Check
+                                        size={17}
+                                        className="mt-1 shrink-0 text-accent"
+                                        aria-hidden="true"
+                                    />
 
-                                <span>{responsibility}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                                    <span>{responsibility}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                {/* Technologies */}
-                <div className="lg:border-l lg:border-border lg:pl-6">
-                    <p className="mb-3 text-xs font-semibold tracking-[0.12em] text-muted-foreground uppercase lg:hidden">
-                        Technologies
-                    </p>
+                    {/* Technologies */}
+                    <div className="lg:border-l lg:border-border lg:pl-6">
+                        <p className="mb-3 text-xs font-semibold tracking-[0.12em] text-muted-foreground uppercase lg:hidden">
+                            Stacks
+                        </p>
 
-                    <div className="flex flex-wrap gap-2 lg:flex-col lg:items-start">
-                        {experience.technologies.map((technology) => (
-                            <Badge
-                                key={technology}
-                                className="border-border bg-background text-muted-foreground"
-                            >
-                                {technology}
-                            </Badge>
-                        ))}
+                        <div className="flex flex-wrap gap-2 lg:flex-col lg:items-start">
+                            {experience?.stacks?.map((stack) => (
+                                <Badge
+                                    key={stack}
+                                    className="border-border bg-background text-muted-foreground"
+                                >
+                                    {stack}
+                                </Badge>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

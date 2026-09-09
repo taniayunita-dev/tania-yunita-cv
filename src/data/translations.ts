@@ -13,15 +13,14 @@ export const translations = {
     hero: {
       role: 'Frontend Developer',
       headline:
-        'Building thoughtful, responsive web experiences with React and TypeScript.',
+        'I build responsive, production-ready interfaces with React and TypeScript.',
       description:
         'Frontend Developer with 3+ years of professional experience building responsive web applications and user-focused interfaces.',
       viewWork: 'View my work',
       contact: 'Contact me',
-      experience: '3+ Years Experience',
-      react: 'React',
-      typescript: 'TypeScript',
-      responsive: 'Responsive UI',
+      credibilities : [
+        '3+ Years Experience', 'React', 'TypeScript', 'Responsive UI', 'API Integration'
+      ]
     },
 
     about: {
@@ -32,7 +31,9 @@ export const translations = {
       description2:
         'I translate UI designs into responsive web interfaces, build reusable components, and integrate APIs to deliver functional and maintainable applications.',
       education: 'Education',
+      degree: 'Bachelor Degree',
       location: 'Location',
+      major: 'Informatics',
       stack: 'Stack I Work With',
       frontend: 'Frontend',
       uiStyling: 'UI & Styling',
@@ -93,25 +94,24 @@ export const translations = {
     hero: {
       role: 'Frontend Developer',
       headline:
-        'Membangun pengalaman web yang responsif dan thoughtful dengan React dan TypeScript.',
+        'Saya membangun interface yang responsive dan production-ready dengan React dan TypeScript.',
       description:
-        'Frontend Developer dengan pengalaman profesional lebih dari 3 tahun dalam membangun aplikasi web responsif dan antarmuka yang berfokus pada pengguna.',
+        'Frontend Developer dengan pengalaman 3+ tahun membangun web application yang clean, scalable, dan maintainable.',
       viewWork: 'Lihat karya saya',
       contact: 'Hubungi saya',
-      experience: '3+ Tahun Pengalaman',
-      react: 'React',
-      typescript: 'TypeScript',
-      responsive: 'Responsive UI',
+      credibilities:['3+ Tahun Pengalaman','React','TypeScript', 'Responsive UI','Integrasi API' ]
     },
 
     about: {
       eyebrow: 'Tentang Saya',
-      title: 'Hi, saya Tania.',
+      title: 'Hi, Saya Tania.',
       description:
         'Frontend Developer dengan pengalaman lebih dari 3 tahun dalam membangun dan mengembangkan aplikasi web menggunakan React dan TypeScript.',
       description2:
         'Saya menerjemahkan desain UI menjadi antarmuka web yang responsif, membangun komponen yang reusable, dan mengintegrasikan API untuk menghasilkan aplikasi yang fungsional dan mudah dipelihara.',
       education: 'Pendidikan',
+      degree: 'S1',
+      major: 'Teknik Informatika',
       location: 'Lokasi',
       stack: 'Stack yang Saya Gunakan',
       frontend: 'Frontend',
@@ -129,7 +129,7 @@ export const translations = {
 
     projects: {
       eyebrow: 'Proyek Pilihan',
-      title: 'Proyek nyata & selected case studies.',
+      title: 'Proyek nyata & studi kasus',
       description:
         'Kumpulan pengalaman profesional dan proyek mandiri yang menunjukkan bagaimana saya membangun aplikasi frontend.',
       professional: 'Pengalaman Profesional',

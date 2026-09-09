@@ -1,10 +1,10 @@
 import { ArrowUpRight } from 'lucide-react';
 
 import { Badge } from '@/components/ui/Badge';
-import type { Project } from '../types/project.types';
+import type { Translation } from '@/types/i18n';
 
 interface ProjectCardProps {
-    project: Project;
+    project: Translation['projects']['items'][number];
     featured?: boolean;
 }
 
@@ -96,7 +96,7 @@ export function ProjectCard({
                                     : 'text-xl',
                             ].join(' ')}
                         >
-                            {project.title}
+                            {project.name}
                         </h3>
 
                         <p
@@ -105,7 +105,7 @@ export function ProjectCard({
                                 featured ? 'max-w-2xl' : 'text-sm',
                             ].join(' ')}
                         >
-                            {project.description}
+                            {project.desc}
                         </p>
                     </div>
 
@@ -120,7 +120,7 @@ export function ProjectCard({
                         ].join(' ')}
                     >
                         <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((technology) => (
+                            {project.stacks?.map((technology) => (
                                 <Badge
                                     key={technology}
                                     className="border-border bg-background text-muted-foreground"

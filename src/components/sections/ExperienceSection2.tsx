@@ -1,9 +1,9 @@
-import { experiences } from '@/features/experience/data/experience.data';
-
 import { Container } from '@/components/ui/Container';
 import { ExperienceCard } from '@/features/experience/components/ExperienceCard2';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export function Experience() {
+    const { t } = useTranslation();
     return (
         <section
             id="experience"
@@ -18,7 +18,7 @@ export function Experience() {
                             <span className="h-2 w-2 rounded-full bg-accent" />
 
                             <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
-                                Professional Experience
+                                {t.experience.eyebrow}
                             </p>
                         </div>
 
@@ -31,22 +31,23 @@ export function Experience() {
                                 'sm:text-4xl',
                             ].join(' ')}
                         >
-                            My professional experience.
+                            {t.experience.heading}
                         </h2>
 
                         <div className="mt-5 h-px w-12 bg-accent" />
 
                         <p className="mt-6 max-w-md text-base leading-7 text-muted-foreground">
-                            Over the past 3+ years, I&apos;ve worked on web applications
-                            across different products and teams.
+                            {/* Over the past 3+ years, I&apos;ve worked on web applications
+                            across different products and teams. */}
+                            {/* {t.experience.description} */}
                         </p>
                     </header>
 
                     {/* Experience cards */}
                     <div className="space-y-5">
-                        {experiences.map((experience) => (
+                        {t.experience.items.map((experience) => (
                             <ExperienceCard
-                                key={`${experience.company}-${experience.duration}`}
+                                key={`${experience.company}-${experience.period}`}
                                 experience={experience}
                             />
                         ))}

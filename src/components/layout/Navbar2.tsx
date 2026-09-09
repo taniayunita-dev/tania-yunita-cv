@@ -1,24 +1,25 @@
-import { ArrowUpRight, Languages, Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { Container } from '@/components/ui/Container';
 import { profile } from '@/features/profile/data/profile.data';
-import { useLanguage } from '@/hooks/useLanguage';
 import { useTranslation } from '@/hooks/useTranslation';
 
-const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Contact', href: '#contact' },
+const navItems: { key: keyof ReturnType<typeof useTranslation>['t']['nav']; href: string; }[] = [
+    { key: 'about', href: '#about' },
+    { key: 'experience', href: '#experience' },
+    { key: 'projects', href: '#projects' },
+    { key: 'skills', href: '#skills' },
+    { key: 'contact', href: '#contact' },
 ];
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const { language, toggleLanguage } = useLanguage();
     const { t } = useTranslation();
+    console.log("data languageeee => ", t);
+
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -94,12 +95,11 @@ export function Navbar() {
 
                         {/* Desktop Navigation */}
                         <nav
-                            className="hidden items-center gap-0.5 md:flex"
+                            className="hidden items-center gap-1 md:flex"
                             aria-label="Primary navigation"
                         >
                             {navItems.map((item) => {
-                                const isContact = item.label === 'Contact';
-
+                                // console.log(item);
                                 return (
                                     <a
                                         key={item.href}
@@ -111,11 +111,11 @@ export function Navbar() {
                                                 'transition-colors duration-200',
                                                 'hover:bg-card hover:text-foreground',
                                                 'focus-visible:outline-none focus-visible:ring-2',
-                                                'focus-visible:ring-accent',
+                                                'focus-visible:ring-accent capitalize',
                                             ].join(' ')
                                         }
                                     >
-                                        {item.label}
+                                        {t.nav[item.key]}
 
                                         {/* {isContact && (
                                             <ArrowUpRight
@@ -221,7 +221,7 @@ export function Navbar() {
                         >
                             <div className="flex flex-col gap-1">
                                 {navItems.map((item) => {
-                                    const isContact = item.label === 'Contact';
+                                    const isContact = item.key === 'contact';
 
                                     return (
                                         <a
@@ -239,11 +239,11 @@ export function Navbar() {
                                                         'rounded-xl px-4 py-3',
                                                         'text-sm font-medium text-muted-foreground',
                                                         'transition-colors duration-200',
-                                                        'hover:bg-card hover:text-foreground',
+                                                        'hover:bg-card hover:text-foreground capitalize',
                                                     ].join(' ')
                                             }
                                         >
-                                            <span>{item.label}</span>
+                                            <span>{t.nav[item.key]}</span>
 
                                             {isContact && (
                                                 <ArrowUpRight

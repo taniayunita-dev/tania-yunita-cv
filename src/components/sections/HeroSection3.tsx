@@ -2,17 +2,19 @@ import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Container } from '@/components/ui/Container';
-import { profile } from '@/features/profile/data/profile.data';
-import BGHeroImage from '@/assets/images/profile3.png';
+import BGHeroImage from '@/assets/images/tania-yunita-profile.png';
+import { useTranslation } from '@/hooks/useTranslation';
 
-const credibilityItems = [
-    '3+ Years Experience',
-    'React',
-    'TypeScript',
-    'Responsive UI',
-];
+// const credibilityItems = [
+//     '3+ Years Experience',
+//     'React',
+//     'TypeScript',
+//     'Responsive UI',
+//     'API Integration'
+// ];
 
 export function HeroSection3() {
+    const { t } = useTranslation();
     return (
         <section
             aria-labelledby="hero-title"
@@ -60,14 +62,14 @@ export function HeroSection3() {
             />
 
             <Container className="relative">
-                <div className="grid min-h-screen items-center lg:grid-cols-[0.9fr_1.1fr]">
+                <div className="grid min-h-screen items-center lg:grid-cols-[1.4fr_0.6fr]">
                     {/* =================================================
               LEFT — CONTENT
               ================================================= */}
-                    <div className="relative z-10 pt-32 pb-10 sm:pt-36 lg:py-32">
+                    <div className="relative z-10 pt-32 ssm:pt-36 lg:py-32">
                         {/* Eyebrow */}
                         <p className="mb-6 text-sm font-semibold tracking-[0.18em] text-accent uppercase">
-                            {profile.role}
+                            {t.hero.eyebrow}
                         </p>
 
                         {/* Headline */}
@@ -85,7 +87,7 @@ export function HeroSection3() {
                                 'xl:text-[4.5rem]',
                             ].join(' ')}
                         >
-                            {profile.headline}
+                            {t.hero.headline}
                         </h1>
 
                         {/* Description */}
@@ -97,7 +99,7 @@ export function HeroSection3() {
                                 'sm:text-lg sm:leading-8',
                             ].join(' ')}
                         >
-                            {profile.description}
+                            {t.hero.subtext}
                         </p>
 
                         {/* CTA */}
@@ -115,7 +117,7 @@ export function HeroSection3() {
                                     'hover:shadow-lg',
                                 ].join(' ')}
                             >
-                                View my work
+                                {t.hero.cta1}
 
                                 <ArrowUpRight
                                     size={18}
@@ -142,13 +144,13 @@ export function HeroSection3() {
                                     'hover:bg-card',
                                 ].join(' ')}
                             >
-                                Contact me
+                                {t.hero.cta2}
                             </ButtonLink>
                         </div>
 
                         {/* Credibility */}
                         <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4">
-                            {credibilityItems.map((item, index) => (
+                            {t.hero.credibilities.map((item, index) => (
                                 <div
                                     key={item}
                                     className="flex items-center gap-2.5 text-sm font-medium text-muted-foreground"
@@ -208,7 +210,7 @@ export function HeroSection3() {
                         >
                             <img
                                 src={BGHeroImage}
-                                alt={`${profile.name} - ${profile.role}`}
+                                alt={`Tania Yunita - ${t.hero.eyebrow}`}
                                 className={[
                                     'absolute inset-0',
                                     'h-full w-full',

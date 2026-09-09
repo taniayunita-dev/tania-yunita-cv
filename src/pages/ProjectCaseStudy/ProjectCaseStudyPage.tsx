@@ -43,7 +43,7 @@ export function ProjectCaseStudyPage() {
 
     const seoTitle = `${project.title} | Frontend Developer`;
 
-    const seoDescription = project.shortDescription;
+    const seoDescription = project.description;
 
     return (
         <article>
