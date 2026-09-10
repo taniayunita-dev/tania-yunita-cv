@@ -17,7 +17,6 @@ export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const { t } = useTranslation();
-    console.log("data languageeee => ", t);
 
 
 
@@ -183,33 +182,39 @@ export function Navbar() {
                             </span>
                         </button> */}
 
+
+
                         {/* Mobile Menu Button */}
-                        <button
-                            type="button"
-                            className={[
-                                'inline-flex h-10 w-10 items-center justify-center rounded-xl',
-                                'border border-border/70 bg-card/70 text-foreground',
-                                'transition-colors duration-200',
-                                'hover:bg-card',
-                                'focus-visible:outline-none focus-visible:ring-2',
-                                'focus-visible:ring-accent',
-                                'md:hidden',
-                            ].join(' ')}
-                            aria-label={
-                                isMenuOpen
-                                    ? 'Close navigation menu'
-                                    : 'Open navigation menu'
-                            }
-                            aria-expanded={isMenuOpen}
-                            aria-controls="mobile-navigation"
-                            onClick={() => setIsMenuOpen((current) => !current)}
-                        >
-                            {isMenuOpen ? (
-                                <X size={19} aria-hidden="true" />
-                            ) : (
-                                <Menu size={19} aria-hidden="true" />
-                            )}
-                        </button>
+                        <div className='flex gap-1 md:hidden'>
+                            <LanguageSwitcher mobile />
+                            <button
+                                type="button"
+                                className={[
+                                    'inline-flex h-10 w-10 items-center justify-center rounded-xl',
+                                    'border border-border/70 bg-card/70 text-foreground',
+                                    'transition-colors duration-200',
+                                    'hover:bg-card',
+                                    'focus-visible:outline-none focus-visible:ring-2',
+                                    'focus-visible:ring-accent',
+                                    'md:hidden',
+                                ].join(' ')}
+                                aria-label={
+                                    isMenuOpen
+                                        ? 'Close navigation menu'
+                                        : 'Open navigation menu'
+                                }
+                                aria-expanded={isMenuOpen}
+                                aria-controls="mobile-navigation"
+                                onClick={() => setIsMenuOpen((current) => !current)}
+                            >
+                                {isMenuOpen ? (
+                                    <X size={19} aria-hidden="true" />
+                                ) : (
+                                    <Menu size={19} aria-hidden="true" />
+                                )}
+                            </button>
+                        </div>
+
                     </div>
 
                     {/* Mobile Navigation */}
@@ -256,16 +261,6 @@ export function Navbar() {
                                 })}
                             </div>
 
-                            {/* Divider */}
-                            <div
-                                aria-hidden="true"
-                                className="my-3 h-px bg-border"
-                            />
-
-                            {/* Language */}
-                            <div className="px-3 py-2">
-                                <LanguageSwitcher mobile />
-                            </div>
                         </nav>
                     )}
                 </div>

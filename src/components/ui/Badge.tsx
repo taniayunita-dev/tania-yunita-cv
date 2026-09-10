@@ -4,9 +4,10 @@ interface BadgeProps extends PropsWithChildren {
     className?: string;
 }
 
-export function Badge({ children, className = '' }: BadgeProps) {
+export function Badge({ children, className = '', ...props }: BadgeProps) {
     return (
         <span
+            {...props}
             className={[
                 'inline-flex items-center rounded-full',
                 'border border-border bg-card px-3 py-1',
@@ -18,3 +19,4 @@ export function Badge({ children, className = '' }: BadgeProps) {
         </span>
     );
 }
+

@@ -77,64 +77,63 @@ export function LanguageSwitcher({
             ref={containerRef}
             className={[
                 'relative',
-                mobile ? 'w-full' : '',
             ].join(' ')}
         >
             {/* Mobile label */}
             {mobile ? (
-                <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-3 text-sm font-medium text-foreground">
-                        <Languages
-                            size={19}
-                            strokeWidth={1.8}
-                            aria-hidden="true"
-                        />
+                // <div className="flex items-center justify-between gap-4">
+                //     <div className="flex items-center gap-3 text-sm font-medium text-foreground">
+                //         <Languages
+                //             size={19}
+                //             strokeWidth={1.8}
+                //             aria-hidden="true"
+                //         />
 
-                        <span>Language</span>
-                    </div>
+                //         <span>Language</span>
+                //     </div>
 
-                    <button
-                        type="button"
-                        onClick={() =>
-                            setIsOpen((current) => !current)
-                        }
-                        aria-label={`Switch language. Current language: ${currentLanguage?.label}`}
-                        aria-expanded={isOpen}
-                        aria-haspopup="listbox"
-                        className={[
-                            'flex h-10 items-center gap-2 w-25',
-                            'rounded-full border border-border',
-                            'bg-card px-3',
-                            'text-sm font-semibold text-foreground',
-                            'shadow-sm',
-                            'transition-all duration-200',
-                            'hover:border-accent/30',
-                            'hover:shadow-md',
-                            'focus-visible:outline-none',
-                            'focus-visible:ring-2',
-                            'focus-visible:ring-accent',
-                        ].join(' ')}
+                <button
+                    type="button"
+                    onClick={() =>
+                        setIsOpen((current) => !current)
+                    }
+                    aria-label={`Switch language. Current language: ${currentLanguage?.label}`}
+                    aria-expanded={isOpen}
+                    aria-haspopup="listbox"
+                    className={[
+                        'flex h-10 items-center gap-2',
+                        'rounded-2xl border border-border',
+                        'bg-card px-3',
+                        'text-sm font-semibold text-foreground',
+                        'shadow-sm',
+                        'transition-all duration-200',
+                        'hover:border-accent/30',
+                        'hover:shadow-md',
+                        'focus-visible:outline-none',
+                        'focus-visible:ring-2',
+                        'focus-visible:ring-accent',
+                    ].join(' ')}
+                >
+                    <span
+                        className="text-lg leading-none"
+                        aria-hidden="true"
                     >
-                        <span
-                            className="text-lg leading-none"
-                            aria-hidden="true"
-                        >
-                            {currentLanguage?.flag}
-                        </span>
+                        {currentLanguage?.flag}
+                    </span>
 
-                        <span>{currentLanguage?.shortLabel}</span>
+                    {/* <span>{currentLanguage?.shortLabel}</span> */}
 
-                        <ChevronDown
-                            size={15}
-                            aria-hidden="true"
-                            className={[
-                                'text-accent',
-                                'transition-transform duration-200',
-                                isOpen ? 'rotate-180' : '',
-                            ].join(' ')}
-                        />
-                    </button>
-                </div>
+                    <ChevronDown
+                        size={15}
+                        aria-hidden="true"
+                        className={[
+                            'text-accent',
+                            'transition-transform duration-200',
+                            isOpen ? 'rotate-180' : '',
+                        ].join(' ')}
+                    />
+                </button>
+                // </div>
             ) : (
                 /* Desktop trigger */
                 <button

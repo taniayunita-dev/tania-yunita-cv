@@ -117,30 +117,140 @@ export const en: Translation = {
     eyebrow: 'EXPERIENCE',
     heading: "Where I've applied what I build.",
     items: [
-      {
-        role: 'Frontend Developer',
-        company: 'TechNova Studio',
-        period: 'Jan 2023 — Present',
-        responsibilities: [
-          'Built and maintained responsive web applications using React and TypeScript, serving 10,000+ active users.',
-          'Collaborated with designers to translate Figma prototypes into production-ready, reusable components.',
-          'Integrated REST APIs and GraphQL endpoints to power dynamic, data-driven interfaces.',
-          'Improved page load performance by 35% through code-splitting and lazy loading.',
-        ],
-        stacks:[]
-      },
-      {
-        role: 'Frontend Developer',
-        company: 'Studio Kreasi Digital',
-        period: 'Jun 2021 — Dec 2022',
-        note: '(Freelance)',
-        responsibilities: [
-          'Developed multiple client websites from scratch using React, delivering fully responsive UI across devices.',
-          'Implemented authentication flows and protected routes for a multi-role dashboard application.',
-        ],
-        stacks:[]
-      },
+       {
+        id:1,
+    role: "Frontend Developer",
+    description:
+      "Worked on a web-based product application and contributed to UI implementation and bug fixing.",
+    company: "PT Printerous Global",
+    period: "December 2021 – January 2022",
+    note: "Freelance · Remote",
+    responsibilities: [
+      "Sliced UI designs from Figma into web interfaces.",
+      "Fixed frontend bugs and improved existing interfaces.",
+      "Integrated frontend features with APIs.",
+      "Collaborated with developers to complete assigned tasks.",
     ],
+    stacks: [
+      "ReactJS",
+      "Axios",
+      "Bootstrap",
+      "Git",
+      "GitLab",
+    ],
+  },
+        {
+          id:2,
+    role: "Frontend Developer",
+    description:
+      "Contributed to the development of a TAPERA website application for BNI's client.",
+    company: "PT Bank Negara Indonesia, Tbk",
+    period: "February 2022 – August 2022",
+    note: "Internship · Remote",
+    responsibilities: [
+      "Developed frontend features for the TAPERA website application.",
+      "Implemented UI based on project requirements.",
+      "Worked with a Single SPA Micro Frontend architecture.",
+      "Integrated frontend features with APIs.",
+      "Collaborated with other developers throughout the development process.",
+    ],
+    stacks: [
+      "Single SPA Micro Frontend",
+      "ReactJS",
+      "Axios",
+      "Ant Design",
+      "Git",
+      "GitLab",
+    ],
+  },
+
+  {
+    id:3,
+    role: "Frontend Developer",
+    description:
+      "Worked as a Frontend Developer building and maintaining web applications for internal and external clients.",
+    company: "PT Walden Global Services (WGS)",
+    period: "December 2021 – 2024",
+    responsibilities: [
+      "Translated UI designs from Figma into responsive web interfaces.",
+      "Built reusable React components and implemented frontend features based on project requirements.",
+      "Integrated frontend applications with REST APIs.",
+      "Collaborated with Backend Developers, UI/UX Designers, QA, and Project Managers.",
+      "Fixed bugs and maintained applications across Development, Staging, and Production environments.",
+      "Used Git and GitLab for version control and team collaboration.",
+    ],
+    stacks: [
+      "ReactJS",
+      "JavaScript",
+      "TypeScript",
+      "Redux",
+      "Axios",
+      "Bootstrap",
+      "Material UI",
+      "Ant Design",
+      "REST API",
+      "Git",
+      "GitLab",
+      "Vercel",
+    ],
+  },
+
+  {
+    id:4,
+    role: "Frontend Developer",
+    description:
+      "Worked as a Frontend Developer at a startup, contributing to a food ordering platform and its administrative dashboard.",
+    company: "Dragatron",
+    period: "2024 – 2025",
+    responsibilities: [
+      "Translated Figma designs into responsive and functional web interfaces.",
+      "Implemented frontend logic for restaurant, food, search, filter, cart, checkout, payment, and order history features.",
+      "Integrated frontend applications with GraphQL APIs.",
+      "Implemented form validation and user interaction flows.",
+      "Worked with authentication and protected routes using token-based sessions.",
+      "Collaborated with Backend Developers and UI/UX Designers to deliver frontend features.",
+      "Contributed to the development of the administrative dashboard.",
+    ],
+    stacks: [
+      "ReactJS",
+      "TypeScript",
+      "RedwoodJS",
+      "GraphQL",
+      "AWS",
+      "REST API",
+      "Local Storage",
+      "Git",
+    ],
+  },
+
+  {
+    id:5,
+    role: "Career Break",
+    description:
+      "A planned career break focused on personal responsibilities while continuing to maintain and develop frontend engineering skills.",
+    company: "Career Break",
+    period: "July 2025 – July 2026",
+    note:
+      "Continued learning and building frontend projects independently to stay connected with modern frontend development practices.",
+    responsibilities: [
+      "Maintained and strengthened frontend development skills through independent learning.",
+      "Built and refined personal frontend projects using React and TypeScript.",
+      "Practiced responsive UI implementation and reusable component architecture.",
+      "Worked on API integration, authentication, state management, and frontend application structure.",
+      "Continued learning modern frontend development practices and tools.",
+    ],
+    stacks: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "React Router",
+      "REST API",
+      "Git",
+      "Vite",
+    ],
+  },
+]
   },
   projects: {
     eyebrow: 'PROJECTS',

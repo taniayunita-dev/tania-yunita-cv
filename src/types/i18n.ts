@@ -61,9 +61,11 @@ export interface Translation {
     }[];
   };
   experience: {
+    
     eyebrow: string;
     heading: string;
     items: {
+      id:number;
       role: string;
       description?:string;
       company: string;
