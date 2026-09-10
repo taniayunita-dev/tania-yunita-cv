@@ -64,8 +64,10 @@ export interface Translation {
     
     eyebrow: string;
     heading: string;
+    desc:string;
     items: {
       id:number;
+      logo:string;
       role: string;
       description?:string;
       company: string;

@@ -9,6 +9,10 @@ import {
     Link as Linkedin,
   Type,
 } from 'lucide-react';
+import LogoPrinterous from '@/assets/images/printerous-logo.jpg'
+import LogoBNI from '@/assets/images/bank-bni-logo.png'
+import LogoDGR from '@/assets/images/dragatron-logo.webp'
+import LogoWGS from '@/assets/images/wgs-logo.svg'
 
 export const id: Translation = {
   nav: {
@@ -113,143 +117,152 @@ export const id: Translation = {
     ],
   },
   experience: {
-    eyebrow: 'EXPERIENCE',
-    heading: 'Tempat saya menerapkan apa yang saya bangun.',
-     items: [
+    eyebrow: 'PENGALAMAN',
+    heading: "Tempat Saya Pernah Bekerja",
+    desc: 'Perjalanan profesional saya di bidang frontend, membangun aplikasi web dan berkolaborasi dengan tim lintas fungsi.',
+    items: [
        {
-        id:1,
-    role: "Frontend Developer",
-    description:
-      "Worked on a web-based product application and contributed to UI implementation and bug fixing.",
-    company: "PT Printerous Global",
-    period: "December 2021 – January 2022",
-    note: "Freelance · Remote",
-    responsibilities: [
-      "Sliced UI designs from Figma into web interfaces.",
-      "Fixed frontend bugs and improved existing interfaces.",
-      "Integrated frontend features with APIs.",
-      "Collaborated with developers to complete assigned tasks.",
-    ],
-    stacks: [
-      "ReactJS",
-      "Axios",
-      "Bootstrap",
-      "Git",
-      "GitLab",
-    ],
-  },
-        {
-          id:2,
-    role: "Frontend Developer",
-    description:
-      "Contributed to the development of a TAPERA website application for BNI's client.",
-    company: "PT Bank Negara Indonesia, Tbk",
-    period: "February 2022 – August 2022",
-    note: "Internship · Remote",
-    responsibilities: [
-      "Developed frontend features for the TAPERA website application.",
-      "Implemented UI based on project requirements.",
-      "Worked with a Single SPA Micro Frontend architecture.",
-      "Integrated frontend features with APIs.",
-      "Collaborated with other developers throughout the development process.",
-    ],
-    stacks: [
-      "Single SPA Micro Frontend",
-      "ReactJS",
-      "Axios",
-      "Ant Design",
-      "Git",
-      "GitLab",
-    ],
-  },
+        id: 1,
+        logo: LogoPrinterous,
+        role: "Frontend Developer",
+        description:
+          "Mengerjakan aplikasi web berbasis produk dan berkontribusi dalam implementasi UI serta perbaikan bug.",
+        company: "PT Printerous Global",
+        period: "Desember 2021 – Januari 2022",
+        note: "Freelance · Remote",
+        responsibilities: [
+          "Mengubah desain UI dari Figma menjadi tampilan web (slicing).",
+          "Memperbaiki bug frontend dan menyempurnakan tampilan yang sudah ada.",
+          "Mengintegrasikan fitur frontend dengan API.",
+          "Berkolaborasi dengan developer lain untuk menyelesaikan tugas yang diberikan.",
+        ],
+        stacks: [
+          "ReactJS",
+          "Axios",
+          "Bootstrap",
+          "Git",
+          "GitLab",
+        ],
+      },
+      {
+        id: 2,
+        logo: LogoBNI,
+        role: "Frontend Developer",
+        description:
+          "Berkontribusi dalam pengembangan aplikasi website TAPERA untuk klien BNI.",
+        company: "PT Bank Negara Indonesia, Tbk",
+        period: "Februari 2022 – Agustus 2022",
+        note: "Magang · Remote",
+        responsibilities: [
+          "Mengembangkan fitur frontend untuk aplikasi website TAPERA.",
+          "Mengimplementasikan UI sesuai kebutuhan proyek.",
+          "Bekerja dengan arsitektur Single SPA Micro Frontend.",
+          "Mengintegrasikan fitur frontend dengan API.",
+          "Berkolaborasi dengan developer lain selama proses pengembangan.",
+        ],
+        stacks: [
+          "Single SPA Micro Frontend",
+          "ReactJS",
+          "Axios",
+          "Ant Design",
+          "Git",
+          "GitLab",
+        ],
+      },
 
-  {
-    id:3,
-    role: "Frontend Developer",
-    description:
-      "Worked as a Frontend Developer building and maintaining web applications for internal and external clients.",
-    company: "PT Walden Global Services (WGS)",
-    period: "December 2021 – 2024",
-    responsibilities: [
-      "Translated UI designs from Figma into responsive web interfaces.",
-      "Built reusable React components and implemented frontend features based on project requirements.",
-      "Integrated frontend applications with REST APIs.",
-      "Collaborated with Backend Developers, UI/UX Designers, QA, and Project Managers.",
-      "Fixed bugs and maintained applications across Development, Staging, and Production environments.",
-      "Used Git and GitLab for version control and team collaboration.",
-    ],
-    stacks: [
-      "ReactJS",
-      "JavaScript",
-      "TypeScript",
-      "Redux",
-      "Axios",
-      "Bootstrap",
-      "Material UI",
-      "Ant Design",
-      "REST API",
-      "Git",
-      "GitLab",
-      "Vercel",
-    ],
-  },
+      {
+        id: 3,
+        logo: LogoWGS,
+        role: "Frontend Developer",
+        description:
+          "Bekerja sebagai Frontend Developer membangun dan memelihara aplikasi web untuk klien internal maupun eksternal.",
+        company: "PT Walden Global Services (WGS)",
+        period: "April 2022 – September 2023",
+        note: 'Fulltime · Hybrid',
+        responsibilities: [
+          "Menerjemahkan desain UI dari Figma menjadi tampilan web yang responsif.",
+          "Membangun komponen React yang dapat digunakan kembali dan mengimplementasikan fitur frontend sesuai kebutuhan proyek.",
+          "Mengintegrasikan aplikasi frontend dengan REST API.",
+          "Berkolaborasi dengan Backend Developer, UI/UX Designer, QA, dan Project Manager.",
+          "Memperbaiki bug dan memelihara aplikasi di lingkungan Development, Staging, dan Production.",
+          "Menggunakan Git dan GitLab untuk version control dan kolaborasi tim.",
+        ],
+        stacks: [
+          "ReactJS",
+          "JavaScript",
+          "TypeScript",
+          "Redux",
+          "Axios",
+          "Bootstrap",
+          "Material UI",
+          "Ant Design",
+          "REST API",
+          "Git",
+          "GitLab",
+          "Vercel",
+        ],
+      },
 
-  {
-    id:4,
-    role: "Frontend Developer",
-    description:
-      "Worked as a Frontend Developer at a startup, contributing to a food ordering platform and its administrative dashboard.",
-    company: "Dragatron",
-    period: "2024 – 2025",
-    responsibilities: [
-      "Translated Figma designs into responsive and functional web interfaces.",
-      "Implemented frontend logic for restaurant, food, search, filter, cart, checkout, payment, and order history features.",
-      "Integrated frontend applications with GraphQL APIs.",
-      "Implemented form validation and user interaction flows.",
-      "Worked with authentication and protected routes using token-based sessions.",
-      "Collaborated with Backend Developers and UI/UX Designers to deliver frontend features.",
-      "Contributed to the development of the administrative dashboard.",
-    ],
-    stacks: [
-      "ReactJS",
-      "TypeScript",
-      "RedwoodJS",
-      "GraphQL",
-      "AWS",
-      "REST API",
-      "Local Storage",
-      "Git",
-    ],
-  },
+      {
+        id: 4,
+        logo: LogoDGR,
+        role: "Frontend Developer",
+        note: "Fulltime · Remote",
+        description:
+          "Bekerja sebagai Frontend Developer di sebuah startup, berkontribusi pada platform pemesanan makanan beserta dashboard administratifnya.",
+        company: "Dragatron",
+        period: "September 2023 – Juli 2025",
+        responsibilities: [
+          "Menerjemahkan desain Figma menjadi tampilan web yang responsif dan fungsional.",
+          "Mengimplementasikan logika frontend untuk fitur restoran, makanan, pencarian, filter, keranjang, checkout, pembayaran, dan riwayat pesanan.",
+          "Mengintegrasikan aplikasi frontend dengan GraphQL API.",
+          "Mengimplementasikan validasi form dan alur interaksi pengguna.",
+          "Bekerja dengan autentikasi dan protected routes menggunakan sesi berbasis token.",
+          "Berkolaborasi dengan Backend Developer dan UI/UX Designer untuk menghadirkan fitur frontend.",
+          "Berkontribusi dalam pengembangan dashboard administratif.",
+        ],
+        stacks: [
+          "ReactJS",
+          "TypeScript",
+          "RedwoodJS",
+          "GraphQL",
+          "AWS",
+          "REST API",
+          "Local Storage",
+          "Git",
+        ],
+      },
 
-  {
-    id:5,
-    role: "Career Break",
-    description:
-      "A planned career break focused on personal responsibilities while continuing to maintain and develop frontend engineering skills.",
-    company: "Career Break",
-    period: "July 2025 – July 2026",
-    note:
-      "Continued learning and building frontend projects independently to stay connected with modern frontend development practices.",
-    responsibilities: [
-      "Maintained and strengthened frontend development skills through independent learning.",
-      "Built and refined personal frontend projects using React and TypeScript.",
-      "Practiced responsive UI implementation and reusable component architecture.",
-      "Worked on API integration, authentication, state management, and frontend application structure.",
-      "Continued learning modern frontend development practices and tools.",
-    ],
-    stacks: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Tailwind CSS",
-      "React Router",
-      "REST API",
-      "Git",
-      "Vite",
-    ],
-  },
-]
+      {
+        id: 5,
+        logo: 'CB',
+        role: "Career Break",
+        description:
+          "Jeda karier yang direncanakan untuk fokus pada tanggung jawab pribadi, sambil terus menjaga dan mengembangkan kemampuan frontend engineering.",
+        company: "Career Break",
+        period: "Juli 2025 – Juli 2026",
+        note:
+          "Terus belajar dan membangun proyek frontend secara mandiri untuk tetap mengikuti praktik pengembangan frontend modern.",
+        responsibilities: [
+          "Mengikuti Perkembangan AI dan penggunaannya dalam pengembangan frontend",
+          "Menjaga dan memperkuat kemampuan frontend development melalui pembelajaran mandiri.",
+          "Membangun dan menyempurnakan proyek frontend pribadi menggunakan React dan TypeScript.",
+          "Berlatih implementasi UI responsif dan arsitektur komponen yang dapat digunakan kembali.",
+          "Mengerjakan integrasi API, autentikasi, state management, dan struktur aplikasi frontend.",
+          "Terus mempelajari praktik dan tools pengembangan frontend modern.",
+        ],
+        stacks: [
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "Tailwind CSS",
+          "React Router",
+          "REST API",
+          "Git",
+          "Vite",
+        ],
+      },
+    ]
   },
   projects: {
     eyebrow: 'PROJECTS',

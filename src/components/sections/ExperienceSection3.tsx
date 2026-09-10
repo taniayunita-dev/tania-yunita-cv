@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 
 import { Container } from '@/components/ui/Container';
+import { Section } from '../ui/Section';
 import { Badge } from '@/components/ui/Badge';
 import { useTranslation } from '@/hooks/useTranslation';
 import { ExperienceDetail } from '@/features/experience/components/ExperienceDetail';
@@ -21,30 +22,27 @@ export function Experience() {
         experiences[0];
 
     return (
-        <section
+        <Section
             id="experience"
-            aria-labelledby="experience-title"
-            className={[
-                'overflow-hidden',
-                'py-20',
-                'sm:py-24',
-                'lg:py-32',
-            ].join(' ')}
+            eyebrow={t.experience.eyebrow}
+            title={t.experience.heading}
+            description={t.experience.desc}
         >
             <Container>
                 {/* ========================================
             SECTION HEADER
         ========================================= */}
-                <div className="max-w-3xl">
-                    <p
-                        className={[
-                            'text-sm font-semibold',
-                            'uppercase tracking-[0.18em]',
-                            'text-accent',
-                        ].join(' ')}
-                    >
-                        02 / Experience
-                    </p>
+                {/* <div className="max-w-3xl">
+                    <div className="flex items-center gap-3">
+                        <span
+                            aria-hidden="true"
+                            className="h-2 w-2 rounded-full bg-accent"
+                        />
+
+                        <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+                            {t.experience.eyebrow}
+                        </p>
+                    </div>
 
                     <h2
                         id="experience-title"
@@ -72,7 +70,7 @@ export function Experience() {
                         where I built web applications and collaborated
                         with cross-functional teams.
                     </p>
-                </div>
+                </div> */}
 
                 {/* ========================================
             EXPERIENCE CONTENT
@@ -83,8 +81,8 @@ export function Experience() {
                             'grid',
                             'min-w-0',
                             'gap-10',
-                            'lg:grid-cols-[0.75fr_1.25fr]',
-                            'lg:gap-6',
+                            'md:grid-cols-[0.55fr_1.45fr]',
+                            'md:gap-6',
                         ].join(' ')}
                     >
                         {/* ======================================
@@ -104,7 +102,7 @@ export function Experience() {
                             >
                                 <div
                                     className={[
-                                        'flex lg:flex-col',
+                                        'flex md:flex-col',
                                         'w-max',
                                         'lg:w-full',
 
@@ -146,7 +144,7 @@ export function Experience() {
                                                         ? [
                                                             'border-l-accent lg:border lg:border-accent',
                                                             'bg-card',
-                                                            'lg:shadow-2xl',
+
                                                         ].join(' ')
                                                         : [
                                                             'border-border',
@@ -380,6 +378,6 @@ export function Experience() {
                     </div>
                 </div>
             </Container>
-        </section>
+        </Section>
     );
 }

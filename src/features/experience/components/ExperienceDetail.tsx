@@ -53,7 +53,7 @@ export function ExperienceDetail({
                                 'text-sm font-bold text-accent',
                             ].join(' ')}
                         >
-                            {getCompanyInitials(experience.company)}
+                            {experience.company == 'Career Break' ? getCompanyInitials(experience.company) : <img src={experience?.logo} className="w-full h-full rounded-xl" alt={experience.company} />}
                         </div>
 
                         <div>
@@ -149,7 +149,7 @@ export function ExperienceDetail({
                     </h4>
 
                     <div className="mt-4 flex flex-wrap gap-2">
-                        {experience.stacks.map((stack, index) => (
+                        {experience.stacks.map((stack) => (
                             <Badge
                                 key={stack}
                                 className={[
@@ -163,9 +163,9 @@ export function ExperienceDetail({
                                     'animate-[experience-item-in_450ms_ease-out_both]',
                                     'motion-reduce:animate-none',
                                 ].join(' ')}
-                                style={{
-                                    animationDelay: `${index * 50 + 180}ms`,
-                                }}
+                            // style={{
+                            //     animationDelay: `${index * 50 + 180}ms`,
+                            // }}
                             >
                                 {stack}
                             </Badge>

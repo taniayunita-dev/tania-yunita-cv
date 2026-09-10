@@ -9,6 +9,10 @@ import {
     Link as Linkedin,
   Type,
 } from 'lucide-react';
+import LogoPrinterous from '@/assets/images/printerous-logo.jpg'
+import LogoBNI from '@/assets/images/bank-bni-logo.png'
+import LogoDGR from '@/assets/images/dragatron-logo.webp'
+import LogoWGS from '@/assets/images/wgs-logo.svg'
 
 
 export const en: Translation = {
@@ -115,10 +119,12 @@ export const en: Translation = {
   },
   experience: {
     eyebrow: 'EXPERIENCE',
-    heading: "Where I've applied what I build.",
+    heading: "Where I've worked",
+    desc:'My professional journey in frontend development, where I built web applications and collaborated with cross-functional teams.',
     items: [
        {
         id:1,
+        logo:LogoPrinterous,
     role: "Frontend Developer",
     description:
       "Worked on a web-based product application and contributed to UI implementation and bug fixing.",
@@ -141,6 +147,7 @@ export const en: Translation = {
   },
         {
           id:2,
+          logo:LogoBNI,
     role: "Frontend Developer",
     description:
       "Contributed to the development of a TAPERA website application for BNI's client.",
@@ -166,11 +173,13 @@ export const en: Translation = {
 
   {
     id:3,
+    logo:LogoWGS,
     role: "Frontend Developer",
     description:
       "Worked as a Frontend Developer building and maintaining web applications for internal and external clients.",
     company: "PT Walden Global Services (WGS)",
-    period: "December 2021 – 2024",
+    period: "April 2022 – September 2023",
+    note: 'Fulltime · Hybrid',
     responsibilities: [
       "Translated UI designs from Figma into responsive web interfaces.",
       "Built reusable React components and implemented frontend features based on project requirements.",
@@ -197,11 +206,13 @@ export const en: Translation = {
 
   {
     id:4,
+    logo:LogoDGR,
     role: "Frontend Developer",
+    note: "Fulltime · Remote",
     description:
       "Worked as a Frontend Developer at a startup, contributing to a food ordering platform and its administrative dashboard.",
     company: "Dragatron",
-    period: "2024 – 2025",
+    period: "September 2023 – July 2025",
     responsibilities: [
       "Translated Figma designs into responsive and functional web interfaces.",
       "Implemented frontend logic for restaurant, food, search, filter, cart, checkout, payment, and order history features.",
@@ -225,6 +236,7 @@ export const en: Translation = {
 
   {
     id:5,
+    logo:'CB',
     role: "Career Break",
     description:
       "A planned career break focused on personal responsibilities while continuing to maintain and develop frontend engineering skills.",
@@ -233,6 +245,7 @@ export const en: Translation = {
     note:
       "Continued learning and building frontend projects independently to stay connected with modern frontend development practices.",
     responsibilities: [
+      "Keeping up with AI developments and its use in front-end development",
       "Maintained and strengthened frontend development skills through independent learning.",
       "Built and refined personal frontend projects using React and TypeScript.",
       "Practiced responsive UI implementation and reusable component architecture.",
