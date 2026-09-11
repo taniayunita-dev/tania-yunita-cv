@@ -96,7 +96,7 @@ export function ProjectCard({
                                     : 'text-xl',
                             ].join(' ')}
                         >
-                            {project.name}
+                            {project.title}
                         </h3>
 
                         <p
@@ -105,7 +105,7 @@ export function ProjectCard({
                                 featured ? 'max-w-2xl' : 'text-sm',
                             ].join(' ')}
                         >
-                            {project.desc}
+                            {project.description}
                         </p>
                     </div>
 

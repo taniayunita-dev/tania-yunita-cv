@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 
 export type Lang = 'en' | 'id';
+export type ProjectType = 'professional' | 'personal';
 
 export interface Translation {
   nav: {
@@ -82,13 +83,17 @@ export interface Translation {
     heading: string;
     subheading?:string;
     items: {
-      name: string;
-      desc: string;
-      image:string;
-      stacks: string[];
-      slug:string;
-      demoLabel: string;
-      codeLabel: string;
+      id:string
+        slug: string;
+        title: string;
+        type: ProjectType;
+        role: string;
+        description: string;
+        features: string[];
+        stacks: string[];
+        image?: string;
+        liveUrl?: string;
+        caseStudyUrl?: string;
     }[];
   };
   contact: {

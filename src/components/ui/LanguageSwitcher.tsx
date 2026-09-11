@@ -1,4 +1,4 @@
-import { Check, ChevronDown, Languages } from 'lucide-react';
+import { Check, ChevronDown } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 import { useLanguage } from '@/hooks/useLanguage';

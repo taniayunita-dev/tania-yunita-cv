@@ -4,11 +4,12 @@ import { SEO } from '@/components/seo/SEO';
 // import { HeroSection2 } from '@/components/sections/HeroSection2';
 import { HeroSection3 } from '@/components/sections/HeroSection3';
 import { About as About2 } from '@/components/sections/AboutSection2';
-import { Experience as Experience2 } from '@/components/sections/ExperienceSection2';
+// import { Experience as Experience2 } from '@/components/sections/ExperienceSection2';
 import { Experience as Experience3 } from '@/components/sections/ExperienceSection3';
 
-import { Projects as Project2 } from '@/components/sections/ProjectsSection2';
+// import { Projects as Project2 } from '@/components/sections/ProjectsSection2';
 import { HowIBuild } from '@/components/sections/HowIBuildSection';
+import { Projects } from '@/components/sections/ProjectSection3';
 
 export function HomePage() {
     return (
@@ -25,7 +26,8 @@ export function HomePage() {
             {/* <ExperienceSection /> */}
             {/* <Experience2 /> */}
             <Experience3 />
-            <Project2 />
+            {/* <Project2 /> */}
+            <Projects />
             <HowIBuild />
             {/* <ProjectSection /> */}
             <EngineeringApproachSection />

@@ -14,6 +14,10 @@ import LogoBNI from '@/assets/images/bank-bni-logo.png'
 import LogoDGR from '@/assets/images/dragatron-logo.webp'
 import LogoWGS from '@/assets/images/wgs-logo.svg'
 
+import Project1 from '@/assets/images/e-learning.png'
+import Project2 from '@/assets/images/sidasafe.png'
+import Project3 from '@/assets/images/food-ordering.png'
+
 
 export const en: Translation = {
   nav: {
@@ -26,12 +30,12 @@ export const en: Translation = {
   hero: {
     eyebrow: 'FRONTEND DEVELOPER',
     headlineParts: ['I build responsive, production-ready interfaces with', 'React and TypeScript.'],
-    headline: 'I build responsive, production-ready interfaces with React and TypeScript.',
+    headline: "I use AI to move fast. The architecture, quality, and experience? That's on me.",
     subtext:
-      'Frontend Developer with 3+ years of experience building clean, scalable, and maintainable web applications.',
+      'Frontend Developer with 3+ years of experience building maintainable web applications with React and TypeScript.',
     cta1: 'View my work',
     cta2: 'Contact me',
-    credibilities:['3+ Years Experience','React','TypeScript', 'Responsive UI','API Integration' ]
+    credibilities:['3+ Years Experience','React','TypeScript','API Integration' ]
   },
   about: {
     eyebrow: 'ABOUT ME',
@@ -63,13 +67,13 @@ export const en: Translation = {
         number: '01',
         title: 'Strong',
         desc: 'Areas I can confidently apply in real-world frontend development.',
-        tags: ['Component Architecture', 'Responsive UI', 'Performance', 'Accessibility'],
+        tags: ['React & Typescript','Component Architecture', 'Responsive UI', 'Performance', 'Accessibility'],
       },
       {
         number: '02',
         title: 'Experienced',
         desc: 'Areas I have applied across projects and professional experience.',
-        tags: ['API Integration', 'Authentication', 'Error Handling', 'State Management'],
+        tags: ['API Integration', 'Authentication', 'Error Handling', 'State Management', 'Design System'],
       },
       {
         number: '03',
@@ -268,26 +272,152 @@ export const en: Translation = {
   projects: {
     eyebrow: 'PROJECTS',
     heading: "Things I've built.",
-    items: [
-      {
-        name: 'TaskFlow',
-        desc: 'A task management app built to explore optimistic UI updates and drag-and-drop interactions.',
-        stacks: ['React', 'TypeScript', 'Tailwind CSS', 'REST API'],
-        demoLabel: 'Live Demo',
-        codeLabel: 'GitHub',
-        slug:'task-flow',
-        image:''
-      },
-      {
-        name: 'WeatherNow',
-        desc: 'A weather dashboard with location search, built with a focus on clean data visualization.',
-        stacks: ['React', 'TypeScript', 'GraphQL'],
-        image:'',
-        slug:'weather-now',
-        demoLabel: 'Live Demo',
-        codeLabel: 'GitHub',
-      },
+    items:[
+       {
+    id: '1',
+    slug: 'fe-online-learning-platform',
+    title: 'FE Online Learning Platform',
+    type: 'professional',
+    role: 'Fullstack Developer',
+    description:
+      'This website provides an online learning platform, where providers can present lesson content in video or pdf form. This platform also provides quizzes that must be done by the user, and users can also provide testimonials on the courses they have purchased.',
+    features: [
+      'Slicing UI Design',
+      'API Integration',
+      'Push code to gitlab repository',
     ],
+    stacks: ['React JS', 'Laravel', 'MySQL', 'Axios', 'Redux', 'Bootstrap', 'Javascript'],
+    image: Project1,
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '2',
+    slug: 'cms-online-learning-platform',
+    title: 'CMS Online Learning Platform',
+    type: 'professional',
+    role: 'Frontend & Backend Developer',
+    description:
+      'A web based CMS related to the FE Online Learning Platform project. In this platform, users can create data such as Mentor, Course Content, Lesson Content, Banner Content, Category of The Course, and generate reports such as the course list that has been purchased by users.',
+    features: [
+      'Create UI',
+      'Create CRUD function for the required data',
+      'Push code to gitlab repository',
+      'Work in tandem with other developers to resolve task on time',
+    ],
+    stacks: ['Laravel', 'MySQL', 'Bootstrap'],
+    image: '',
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '3',
+    slug: 'iot-for-close-and-open-door',
+    title: 'IoT for Close and Open Door',
+    type: 'professional',
+    role: 'Frontend Developer',
+    description:
+      'A website platform converted to a Desktop Application, using IoT for opening a door, built for a Gym Company where the gym has no employee. Every customer entering the room has to input the code number into a PC AIO, and if the code is correct, the door automatically opens and the customer can enter the room.',
+    features: [
+      'Slicing UI Design to Website',
+      'API integration',
+      'Push to Git Github repository',
+      'Work in tandem with other developers to resolve task on time or ask for help or offering help to others if my task have done',
+    ],
+    stacks: ['React JS', 'Axios', 'Redux', 'Bootstrap', 'Electron'],
+    image: '',
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '4',
+    slug: 'dashboard-website',
+    title: 'Dashboard Website',
+    type: 'professional',
+    role: 'Frontend Developer',
+    description:
+      'A website platform to help a showroom business sell and buyback cars. This web app is used to store and create data such as showroom list, inventory car product for each showroom, transaction, and product information.',
+    features: [
+      'Slicing UI Design to Website',
+      'API integration',
+      'Discussing a library to be used',
+      'Push to Git Github repository',
+      'Work in tandem with other developers to resolve task on time or ask for help or offering help to others if my task have done',
+    ],
+    stacks: [
+      'React JS',
+      'Axios',
+      'Redux',
+      'Material UI',
+      'Typescript',
+      'NX Monorepo',
+    ],
+    image: '',
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '5',
+    slug: 'content-management-system',
+    title: 'Content Management System',
+    type: 'professional',
+    role: 'Frontend Developer',
+    description:
+      'A website to help an Admin in a technology company that helps sellers and buyers make payment transactions. This website helps the Admin get information about transactions, payment status, and approval for users who will withdraw their money from the app.',
+    features: [
+      'Slicing UI Design to Website',
+      'API integration',
+      'Discussing a library to be used',
+      'Push to Git Github repository',
+    ],
+    stacks: ['React JS', 'Axios', 'Ant Design'],
+    image: '',
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '6',
+    slug: 'queue-management-system',
+    title: 'Queue Management System',
+    type: 'personal',
+    role: 'Frontend Developer',
+    description:
+      'Final project for the Front End Bootcamp Digital Talent Kominfo, a scholarship program in collaboration with some of the biggest banks in Indonesia. Built with 2 other friends, this website helps banking customers order queue tickets to get banking services.',
+    features: [
+      'Arrange dividing task for development to my team and discuss about what the feature should we build',
+      'Slicing UI Design to Website',
+      'Discussing a library to be used',
+      'Make sure all the communication is effective',
+      'Push to Git repository',
+      'Work in tandem with other developers to resolve task on time',
+      'Deploy website to public using Vercel',
+    ],
+    stacks: ['React JS', 'Axios', 'Bootstrap', 'PWA'],
+    image: Project2,
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '7',
+    slug: 'restaurant-shop-website',
+    title: 'Restaurant Shop Website',
+    type: 'professional',
+    role: 'Frontend Developer',
+    description:
+      'A website to help a seller sell their food products online, where customers can also order directly in the restaurant. This app gives information for transactions, cooking time, and the customer table.',
+    features: [
+      'Slicing UI Design to Website',
+      'API integration',
+      'Discussing a library to be used',
+      'Push to Git Github repository',
+      'Work in tandem with other developers to resolve task on time or ask for help or offering help to others if my task have done',
+    ],
+    stacks: ['React JS', 'Axios', 'Ant Design', 'Javascript', 'RedwoodJS'],
+    image: Project3,
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+    ]
   },
   contact: {
     name:'Tania Yunita',

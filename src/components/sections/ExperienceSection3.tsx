@@ -1,14 +1,10 @@
 import { useState } from 'react';
 import {
-    ArrowUpRight,
-    BriefcaseBusiness,
-    CalendarDays,
-    Check,
+    ArrowUpRight
 } from 'lucide-react';
 
 import { Container } from '@/components/ui/Container';
 import { Section } from '../ui/Section';
-import { Badge } from '@/components/ui/Badge';
 import { useTranslation } from '@/hooks/useTranslation';
 import { ExperienceDetail } from '@/features/experience/components/ExperienceDetail';
 
