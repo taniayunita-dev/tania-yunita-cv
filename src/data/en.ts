@@ -393,7 +393,7 @@ export const en: Translation = {
       'Deploy website to public using Vercel',
     ],
     stacks: ['React JS', 'Axios', 'Bootstrap', 'PWA'],
-    image: Project2,
+    image: '',
     liveUrl: '',
     caseStudyUrl: '',
   },

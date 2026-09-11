@@ -9,7 +9,7 @@ export function HowIBuild() {
     const { t } = useTranslation();
     return (
         <section
-            id="how-i-build"
+            id="skills"
             aria-labelledby="how-i-build-title"
             className="relative overflow-hidden bg-card py-20 sm:py-24 lg:py-32"
         >
