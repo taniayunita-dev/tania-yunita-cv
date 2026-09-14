@@ -68,7 +68,7 @@ export function HeroSection3() {
               ================================================= */}
                     <div className="relative z-10 pt-32 ssm:pt-36 lg:py-32">
                         {/* Eyebrow */}
-                        <p className="mb-6 text-sm font-semibold tracking-[0.18em] text-accent uppercase">
+                        <p className="mb-6 text-sm font-semibold animate-fade-in-up animate-duration-1000 tracking-[0.18em] text-accent uppercase">
                             {t.hero.eyebrow}
                         </p>
 
@@ -76,7 +76,7 @@ export function HeroSection3() {
                         <h1
                             id="hero-title"
                             className={[
-                                'max-w-2xl',
+                                'max-w-2xl animate-fade-in-up animate-duration-1000 animate-delay-300',
                                 'text-4xl font-semibold',
                                 'leading-[1.05]',
                                 'tracking-[-0.045em]',
@@ -93,7 +93,7 @@ export function HeroSection3() {
                         {/* Description */}
                         <p
                             className={[
-                                'mt-7 max-w-xl',
+                                'mt-7 max-w-xl animate-fade-in-up animate-duration-1000',
                                 'text-base leading-7',
                                 'text-muted-foreground',
                                 'sm:text-lg sm:leading-8',
@@ -109,7 +109,7 @@ export function HeroSection3() {
                                 size="lg"
                                 className={[
                                     'group rounded-xl',
-                                    'bg-primary text-primary-foreground',
+                                    'bg-primary text-primary-foreground animate-fade-in-up animate-duration-1000',
                                     'px-6',
                                     'shadow-sm',
                                     'transition-all duration-200',
@@ -123,7 +123,7 @@ export function HeroSection3() {
                                     size={18}
                                     aria-hidden="true"
                                     className={[
-                                        'transition-transform duration-200',
+                                        'transition-transform duration-200 animate-fade-in-up animate-duration-1000',
                                         'group-hover:translate-x-0.5',
                                         'group-hover:-translate-y-0.5',
                                     ].join(' ')}
@@ -139,7 +139,7 @@ export function HeroSection3() {
                                     'border-border',
                                     'bg-background',
                                     'px-6',
-                                    'transition-all duration-200',
+                                    'transition-all duration-200 animate-fade-in-up animate-duration-1000',
                                     'hover:-translate-y-0.5',
                                     'hover:bg-card',
                                 ].join(' ')}
@@ -212,7 +212,7 @@ export function HeroSection3() {
                                 src={BGHeroImage}
                                 alt={`Tania Yunita - ${t.hero.eyebrow}`}
                                 className={[
-                                    'absolute inset-0',
+                                    'absolute inset-0 animate-fade-in-up animate-delay-500 animate-duration-1000',
                                     'h-full w-full',
                                     'object-contain',
                                     'object-bottom',

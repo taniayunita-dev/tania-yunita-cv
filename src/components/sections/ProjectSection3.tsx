@@ -1,4 +1,4 @@
-import { ArrowUpRight, BriefcaseBusiness } from 'lucide-react';
+// import { BriefcaseBusiness } from 'lucide-react';
 
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
@@ -44,7 +44,7 @@ function ProjectCard({
             <div
                 className={[
                     'relative',
-                    'aspect-[16/10]',
+                    'aspect-16/10',
                     'overflow-hidden',
                     'border-b border-white/10',
                     'bg-[#101d2f]',
@@ -140,15 +140,17 @@ function ProjectCard({
                             : 'Personal Case Study'}
                     </span>
 
-                    {isProfessional && (
+                    {/* {isProfessional && (
                         <BriefcaseBusiness
                             size={15}
                             strokeWidth={1.7}
                             className="shrink-0 text-white/45"
                             aria-hidden="true"
                         />
-                    )}
+                    )} */}
+                    <p className='text-white text-sm font-extrabold'>{project.date}</p>
                 </div>
+
 
                 {/* Title */}
                 <h3
@@ -199,7 +201,7 @@ function ProjectCard({
                     </div>
 
                     {/* CTA */}
-                    <a
+                    {/* <a
                         href={project.slug}
                         className={[
                             'group/link',
@@ -228,7 +230,7 @@ function ProjectCard({
                                 'group-hover/link:-translate-y-0.5',
                             ].join(' ')}
                         />
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </article>
@@ -366,7 +368,6 @@ export function Projects() {
                             'min-w-0 max-w-full',
                             'overflow-x-auto overflow-y-hidden',
                             'overscroll-x-contain',
-                            'touch-pan-x',
                             'snap-x snap-mandatory',
                             'scrollbar-none',
                             'pb-4',

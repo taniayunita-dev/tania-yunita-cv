@@ -1,5 +1,7 @@
 /* CSS Design Tokens */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 @import 'tailwindcss';
+@import 'tailwind-animations';
 
 @theme {
   --color-background: #fafafa;
@@ -21,6 +23,8 @@
 
   --color-danger: #dc2626;
   --color-danger-foreground: #ffffff;
+
+  --font-instrument-serif:"Instrument Serif", serif;
 }
 
 :root {

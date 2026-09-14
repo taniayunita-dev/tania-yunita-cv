@@ -85,6 +85,7 @@ export interface Translation {
     items: {
       id:string
         slug: string;
+        date:string;
         title: string;
         type: ProjectType;
         role: string;

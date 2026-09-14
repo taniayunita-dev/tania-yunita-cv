@@ -7,6 +7,8 @@ import {
   Smartphone,
   GitBranchIcon as Github,
     Link as Linkedin,
+    Zap,
+    ShieldCheck,
   Type,
 } from 'lucide-react';
 import LogoPrinterous from '@/assets/images/printerous-logo.jpg'
@@ -30,9 +32,9 @@ export const en: Translation = {
   hero: {
     eyebrow: 'FRONTEND DEVELOPER',
     headlineParts: ['I build responsive, production-ready interfaces with', 'React and TypeScript.'],
-    headline: "I use AI to move fast. The architecture, quality, and experience? That's on me.",
+    headline: "I leverage AI to build fast, and solid fundamentals to build right.",
     subtext:
-      'Frontend Developer with 3+ years of experience building maintainable web applications with React and TypeScript.',
+      'Frontend Developer with 3+ years of experience building maintainable web applications with reliable user experiences using React and TypeScript.',
     cta1: 'View my work',
     cta2: 'Contact me',
     credibilities:['3+ Years Experience','React','TypeScript','API Integration' ]
@@ -59,27 +61,27 @@ export const en: Translation = {
   },
   skills: {
     eyebrow: 'SKILLS',
-    heading: 'How I approach frontend development.',
+    heading: 'My Tech Stack & Capabilities.',
     subtext:
-      "A selection of frontend practices I'm confident with, experienced in, and currently developing.",
+      "A structured overview of my core skills, hands-on experience, and ongoing technical growth.",
     items: [
       {
         number: '01',
         title: 'Strong',
         desc: 'Areas I can confidently apply in real-world frontend development.',
-        tags: ['React & Typescript','Component Architecture', 'Responsive UI', 'Performance', 'Accessibility'],
+        tags: ['Javascript', 'Typescript','ReactJS','NextJS', 'HTML5', 'CSS3', 'Tailwindcss', 'Bootstrap', 'git', 'Github', 'Gitlab'],
       },
       {
         number: '02',
         title: 'Experienced',
         desc: 'Areas I have applied across projects and professional experience.',
-        tags: ['API Integration', 'Authentication', 'Error Handling', 'State Management', 'Design System'],
+        tags: ['API Integration', 'Rest API', 'PostgreSQL', 'Authentication', 'Error Handling', 'State Management', 'Redux', 'Context', 'Design System', 'Jest'],
       },
       {
         number: '03',
         title: 'Currently Developing',
         desc: 'Areas I am actively strengthening through hands-on practice.',
-        tags: ['Testing', 'Advanced State Architecture', 'CI/CD', 'Web Performance Optimization'],
+        tags: ['Testing', 'Advanced State Architecture', 'Web Performance Optimization'],
       },
     ],
   },
@@ -87,7 +89,7 @@ export const en: Translation = {
     eyebrow: 'HOW I BUILD',
     heading: 'A practical approach i use in frontend engineering',
     subtext:
-      'Good frontend development is about more than translating a design into code. I focus on creating interfaces that are useful for users and maintainable for developers.',
+      'Good frontend development is about more than translating a design into code. I focus on creating interfaces that are useful for users and maintainable for developers and built for scale.',
     principles: [
       {
         icon: Boxes,
@@ -105,20 +107,27 @@ export const en: Translation = {
         desc: 'I build interfaces with different screen sizes in mind, from mobile layouts to larger desktop experiences.',
       },
       {
+        icon: Zap,
+        title: 'AI-Accelerated Workflow',
+        desc: 'I leverage modern AI tools to speed up boilerplate and routine coding, leaving more time to refine complex architecture, logic, and UX.',
+      },
+      {
         icon: Gauge,
         title: 'Performance-focused',
         desc: 'I optimize rendering, lazy-load components, and minimize bundle size so apps stay fast as they grow.',
       },
       {
         icon: Accessibility,
-        title: 'Accessible by default',
-        desc: 'I follow semantic HTML and ARIA practices so interfaces work for as many users as possible.',
+        title: 'Accessible by default (A11y)',
+        desc: 'I follow semantic HTML, ARIA standards, and WCAG guidelines to ensure web applications are inclusive and accessible for everyone.',
       },
       {
-        icon: Smartphone,
+        icon: ShieldCheck,
         title: 'Tested with intent',
-        desc: 'I write tests for critical logic and components, not for coverage numbers, to catch regressions before they reach production.',
+        desc: 'I test critical components and logic using tools like Jest and React Testing Library to catch potential bugs early.',
       },
+
+      
     ],
   },
   experience: {
@@ -271,10 +280,12 @@ export const en: Translation = {
   },
   projects: {
     eyebrow: 'PROJECTS',
-    heading: "Things I've built.",
+    heading: "Featured Projects",
+    subheading:"A selection of projects I’ve built and contributed to, showcasing practical frontend development and user-focused interfaces.",
     items:[
        {
     id: '1',
+    date:'2023',
     slug: 'fe-online-learning-platform',
     title: 'FE Online Learning Platform',
     type: 'professional',
@@ -293,6 +304,7 @@ export const en: Translation = {
   },
   {
     id: '2',
+    date:'2023',
     slug: 'cms-online-learning-platform',
     title: 'CMS Online Learning Platform',
     type: 'professional',
@@ -312,6 +324,7 @@ export const en: Translation = {
   },
   {
     id: '3',
+    date:'2023',
     slug: 'iot-for-close-and-open-door',
     title: 'IoT for Close and Open Door',
     type: 'professional',
@@ -331,6 +344,7 @@ export const en: Translation = {
   },
   {
     id: '4',
+    date:'2022',
     slug: 'dashboard-website',
     title: 'Dashboard Website',
     type: 'professional',
@@ -358,6 +372,7 @@ export const en: Translation = {
   },
   {
     id: '5',
+    date:'2022',
     slug: 'content-management-system',
     title: 'Content Management System',
     type: 'professional',
@@ -377,6 +392,7 @@ export const en: Translation = {
   },
   {
     id: '6',
+    date:'2021',
     slug: 'queue-management-system',
     title: 'Queue Management System',
     type: 'personal',
@@ -399,6 +415,7 @@ export const en: Translation = {
   },
   {
     id: '7',
+    date:'2025',
     slug: 'restaurant-shop-website',
     title: 'Restaurant Shop Website',
     type: 'professional',
@@ -414,6 +431,26 @@ export const en: Translation = {
     ],
     stacks: ['React JS', 'Axios', 'Ant Design', 'Javascript', 'RedwoodJS'],
     image: Project3,
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '8',
+    date:'2025',
+    slug: 'landing-page-sidasafe',
+    title: 'Landing Page SidaSafe',
+    type: 'personal',
+    role: 'Frontend Developer',
+    description:
+      'A responsive landing page for SidaSafe, a transportation company. The website is designed to showcase company services, fleet highlights, key features, and corporate profile, providing a clear and engaging experience for potential clients.',
+    features: [
+      'Responsive Web Design',
+      'Slicing UI Design',
+      'Interactive Hero Section & Service Showcase',
+      'Contact & Inquiry Integration',
+    ],
+    stacks: ['HTML5', 'CSS3','Javascript'],
+    image: Project2, 
     liveUrl: '',
     caseStudyUrl: '',
   },

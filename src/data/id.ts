@@ -8,6 +8,8 @@ import {
   GitBranchIcon as Github,
     Link as Linkedin,
   Type,
+  Zap,
+  ShieldCheck
 } from 'lucide-react';
 import LogoPrinterous from '@/assets/images/printerous-logo.jpg'
 import LogoBNI from '@/assets/images/bank-bni-logo.png'
@@ -26,17 +28,16 @@ export const id: Translation = {
     skills: 'Skills',
     contact: 'Kontak',
   },
-  hero: {
+hero: {
     eyebrow: 'FRONTEND DEVELOPER',
-    headlineParts: ['Saya membangun interface yang responsive dan production-ready dengan', 'React dan TypeScript.'],
-    headline: 'Saya memakai AI untuk bekerja cepat. Arsitektur, kualitas, dan pengalaman pengguna? Itu tanggung jawab saya.',
+    headlineParts: ['Saya membangun antarmuka responsif dan siap pakai (production-ready) dengan', 'React dan TypeScript.'],
+    headline: "Saya memanfaatkan AI untuk membangun dengan cepat, serta fondasi yang kuat untuk membangun dengan tepat.",
     subtext:
-      'Frontend Developer dengan pengalaman 3+ tahun membangun aplikasi web yang mudah dikelola menggunakan React dan TypeScript',
-    cta1: 'Lihat portfolio saya',
+      'Frontend Developer dengan pengalaman 3+ tahun dalam membangun aplikasi web yang mudah dirawat dan menghadirkan pengalaman pengguna yang andal menggunakan React dan TypeScript.',
+    cta1: 'Lihat karya saya',
     cta2: 'Hubungi saya',
-    credibilities:['3+ Tahun Pengalaman','React','TypeScript', 'Responsive UI','Integrasi API' ]
-
-  },
+    credibilities: ['Pengalaman 3+ Tahun', 'React', 'TypeScript', 'API Integration']
+},
   about: {
     eyebrow: 'TENTANG SAYA',
     greeting: 'Hai, saya',
@@ -58,68 +59,74 @@ export const id: Translation = {
     },
   },
   skills: {
-    eyebrow: 'SKILLS',
-    heading: 'Bagaimana saya mendekati frontend development.',
-    subtext: 'Beberapa frontend practice yang saya kuasai, sudah pernah terapkan, dan sedang saya kembangkan.',
+    eyebrow: 'KEAHLIAN',
+    heading: 'Tech Stack & Kapabilitas Saya.',
+    subtext:
+      "Gambaran terstruktur tentang keahlian utama, pengalaman praktis, dan pengembangan teknis yang sedang saya jalani.",
     items: [
       {
         number: '01',
-        title: 'Menguasai',
-        desc: 'Area yang bisa saya terapkan dengan percaya diri dalam real-world frontend development.',
-        tags: ['Component Architecture', 'Responsive UI', 'Performance', 'Accessibility'],
+        title: 'Kuasai dengan Baik',
+        desc: 'Bidang yang dapat saya terapkan dengan percaya diri dalam pengembangan frontend dunia nyata.',
+        tags: ['Javascript', 'Typescript', 'ReactJS', 'NextJS', 'HTML5', 'CSS3', 'Tailwindcss', 'Bootstrap', 'git', 'Github', 'Gitlab'],
       },
       {
         number: '02',
         title: 'Berpengalaman',
-        desc: 'Area yang sudah saya terapkan di berbagai project dan pengalaman profesional.',
-        tags: ['API Integration', 'Authentication', 'Error Handling', 'State Management'],
+        desc: 'Bidang yang telah saya terapkan di berbagai proyek dan pengalaman profesional.',
+        tags: ['API Integration', 'Rest API', 'PostgreSQL', 'Authentication', 'Error Handling', 'State Management', 'Redux', 'Context', 'Design System', 'Jest'],
       },
       {
         number: '03',
-        title: 'Sedang Dikembangkan',
-        desc: 'Area yang sedang aktif saya perdalam melalui hands-on practice.',
-        tags: ['Testing', 'Advanced State Architecture', 'CI/CD', 'Web Performance Optimization'],
+        title: 'Sedang Didalami',
+        desc: 'Bidang yang sedang aktif saya perkuat melalui praktik langsung.',
+        tags: ['Testing', 'Advanced State Architecture', 'Web Performance Optimization'],
       },
     ],
-  },
+},
   howIBuild: {
-    eyebrow: 'PENDEKATAN SAYA',
-    heading: 'Pendekatan yang saya gunakan dalam frontend engineering',
+    eyebrow: 'CARA SAYA MEMBANGUN',
+    heading: 'Pendekatan praktis yang saya terapkan dalam frontend engineering',
     subtext:
-      'Frontend development yang baik itu lebih dari sekadar menerjemahkan design menjadi code. Saya fokus membangun interface yang berguna untuk user dan maintainable untuk developer.',
+      'Pengembangan frontend yang baik lebih dari sekadar mengubah desain menjadi kode. Saya berfokus untuk menciptakan antarmuka yang berguna bagi pengguna, mudah dirawat oleh pengembang, dan siap untuk berkembang (built for scale).',
     principles: [
       {
-        icon:Boxes,
+        icon: Boxes,
         title: 'Component-driven',
-        desc: 'Saya memecah interface menjadi reusable component untuk menjaga UI tetap konsisten dan codebase lebih mudah di-maintain.',
+        desc: 'Saya memecah antarmuka menjadi komponen yang dapat digunakan kembali (reusable) agar UI tetap konsisten dan codebase lebih mudah dirawat.',
       },
       {
         icon: Type,
         title: 'Type-safe',
-        desc: 'Saya menggunakan TypeScript agar component props, application data, dan API response lebih mudah dipahami dan lebih aman untuk dikerjakan.',
+        desc: 'Saya menggunakan TypeScript untuk membuat prop komponen, data aplikasi, dan respon API lebih mudah dipahami serta lebih aman saat dikerjakan.',
       },
       {
         icon: Smartphone,
-        title: 'Responsive',
-        desc: 'Saya membangun interface dengan mempertimbangkan berbagai ukuran layar, dari mobile layout hingga desktop experience yang lebih besar.',
+        title: 'Responsif',
+        desc: 'Saya membangun antarmuka dengan mempertimbangkan berbagai ukuran layar, mulai dari tata letak seluler hingga tampilan desktop yang lebih luas.',
+      },
+      {
+        icon: Zap,
+        title: 'AI-Accelerated Workflow',
+        desc: 'Saya memanfaatkan alat AI modern untuk mempercepat penulisan boilerplate dan koding rutin, sehingga punya lebih banyak waktu untuk menyempurnakan arsitektur kompleks, logika, dan UX.',
       },
       {
         icon: Gauge,
-        title: 'Performance-focused',
-        desc: 'Saya optimize rendering, lazy-load component, dan minimize bundle size supaya aplikasi tetap cepat seiring bertambah besar.',
+        title: 'Berfokus pada Performa',
+        desc: 'Saya mengoptimalkan proses rendering, menerapkan lazy-loading pada komponen, dan meminimalkan ukuran bundle agar aplikasi tetap cepat seiring pertumbuhannya.',
       },
       {
         icon: Accessibility,
-        title: 'Accessible by default',
-        desc: 'Saya mengikuti semantic HTML dan ARIA practice supaya interface bisa digunakan oleh sebanyak mungkin user.',
+        title: 'Aksesibel secara Default (A11y)',
+        desc: 'Saya menerapkan HTML semantik, standar ARIA, dan panduan WCAG untuk memastikan aplikasi web bersifat inklusif dan dapat diakses oleh siapa saja.',
       },
       {
-        icon: Smartphone,
-        title: 'Tested with intent',
-        desc: 'Saya menulis test untuk logic dan component yang kritikal, bukan sekadar mengejar coverage number, untuk menangkap regression sebelum sampai ke production.',
+        icon: ShieldCheck,
+        title: 'Tested with Intent',
+        desc: 'Saya menguji komponen dan logika krusial menggunakan alat seperti Jest dan React Testing Library untuk mendeteksi potensi bug lebih awal.',
       },
     ],
-  },
+},
   experience: {
     eyebrow: 'PENGALAMAN',
     heading: "Tempat Saya Pernah Bekerja",
@@ -269,21 +276,24 @@ export const id: Translation = {
     ]
   },
   projects: {
-    eyebrow: 'PROJECTS',
-    heading: 'Hal-hal yang sudah saya bangun.',
+    eyebrow: 'PROYEK',
+    heading: "Proyek Pilihan",
+    subheading:"Beberapa proyek yang pernah saya bangun dan kontribusikan, menampilkan pengembangan frontend praktis dan antarmuka yang berfokus pada pengguna.",
     items:[
        {
     id: '1',
+    date:'2023',
+
     slug: 'fe-online-learning-platform',
     title: 'FE Online Learning Platform',
     type: 'professional',
     role: 'Fullstack Developer',
     description:
-      'This website provides an online learning platform, where providers can present lesson content in video or pdf form. This platform also provides quizzes that must be done by the user, and users can also provide testimonials on the courses they have purchased.',
+      'Platform pembelajaran online tempat penyedia materi dapat menyajikan konten pelajaran berbentuk video atau PDF. Platform ini juga menyediakan kuis yang wajib dikerjakan oleh pengguna, serta fitur ulasan/testimoni untuk kursus yang telah dibeli.',
     features: [
       'Slicing UI Design',
       'API Integration',
-      'Push code to gitlab repository',
+      'Push code ke repositori GitLab',
     ],
     stacks: ['React JS', 'Laravel', 'MySQL', 'Axios', 'Redux', 'Bootstrap', 'Javascript'],
     image: Project1,
@@ -292,17 +302,19 @@ export const id: Translation = {
   },
   {
     id: '2',
+    date:'2023',
+
     slug: 'cms-online-learning-platform',
     title: 'CMS Online Learning Platform',
     type: 'professional',
     role: 'Frontend & Backend Developer',
     description:
-      'A web based CMS related to the FE Online Learning Platform project. In this platform, users can create data such as Mentor, Course Content, Lesson Content, Banner Content, Category of The Course, and generate reports such as the course list that has been purchased by users.',
+      'CMS berbasis web yang terhubung dengan proyek FE Online Learning Platform. Melalui platform ini, admin/pengguna dapat mengelola data seperti Mentor, Konten Kursus, Materi Pelajaran, Banner, Kategori Kursus, serta menghasilkan laporan daftar kursus yang dibeli oleh pengguna.',
     features: [
-      'Create UI',
-      'Create CRUD function for the required data',
-      'Push code to gitlab repository',
-      'Work in tandem with other developers to resolve task on time',
+      'Membuat UI',
+      'Membuat fungsi CRUD untuk data yang dibutuhkan',
+      'Push code ke repositori GitLab',
+      'Bekerja sama dengan developer lain untuk menyelesaikan tugas tepat waktu',
     ],
     stacks: ['Laravel', 'MySQL', 'Bootstrap'],
     image: '',
@@ -311,17 +323,19 @@ export const id: Translation = {
   },
   {
     id: '3',
+    date:'2023',
+
     slug: 'iot-for-close-and-open-door',
     title: 'IoT for Close and Open Door',
     type: 'professional',
     role: 'Frontend Developer',
     description:
-      'A website platform converted to a Desktop Application, using IoT for opening a door, built for a Gym Company where the gym has no employee. Every customer entering the room has to input the code number into a PC AIO, and if the code is correct, the door automatically opens and the customer can enter the room.',
+      'Platform situs web yang dikonversi menjadi Aplikasi Desktop menggunakan IoT untuk membuka pintu otomatis. Dibuat untuk perusahaan gym tanpa staf/karyawan, di mana setiap pelanggan yang ingin masuk harus memasukkan kode unik ke PC AIO. Jika kode benar, pintu akan terbuka secara otomatis.',
     features: [
-      'Slicing UI Design to Website',
-      'API integration',
-      'Push to Git Github repository',
-      'Work in tandem with other developers to resolve task on time or ask for help or offering help to others if my task have done',
+      'Slicing UI Design ke Website',
+      'API Integration',
+      'Push ke repositori GitHub',
+      'Bekerja sama dengan developer lain untuk menyelesaikan tugas tepat waktu, saling membantu dan berkolaborasi saat tugas selesai',
     ],
     stacks: ['React JS', 'Axios', 'Redux', 'Bootstrap', 'Electron'],
     image: '',
@@ -330,18 +344,20 @@ export const id: Translation = {
   },
   {
     id: '4',
+    date:'2022',
+
     slug: 'dashboard-website',
     title: 'Dashboard Website',
     type: 'professional',
     role: 'Frontend Developer',
     description:
-      'A website platform to help a showroom business sell and buyback cars. This web app is used to store and create data such as showroom list, inventory car product for each showroom, transaction, and product information.',
+      'Platform web untuk membantu operasional jual-beli mobil pada bisnis showroom. Aplikasi ini digunakan untuk menyimpan dan mengelola data seperti daftar showroom, inventaris mobil tiap showroom, transaksi, dan informasi produk.',
     features: [
-      'Slicing UI Design to Website',
-      'API integration',
-      'Discussing a library to be used',
-      'Push to Git Github repository',
-      'Work in tandem with other developers to resolve task on time or ask for help or offering help to others if my task have done',
+      'Slicing UI Design ke Website',
+      'API Integration',
+      'Mendiskusikan library yang akan digunakan',
+      'Push ke repositori GitHub',
+      'Bekerja sama dengan developer lain untuk menyelesaikan tugas tepat waktu, serta saling membantu dalam tim',
     ],
     stacks: [
       'React JS',
@@ -357,17 +373,19 @@ export const id: Translation = {
   },
   {
     id: '5',
+    date:'2022',
+
     slug: 'content-management-system',
     title: 'Content Management System',
     type: 'professional',
     role: 'Frontend Developer',
     description:
-      'A website to help an Admin in a technology company that helps sellers and buyers make payment transactions. This website helps the Admin get information about transactions, payment status, and approval for users who will withdraw their money from the app.',
+      'Aplikasi web untuk membantu Admin di perusahaan teknologi yang memfasilitasi transaksi pembayaran antara penjual dan pembeli. Sistem ini membantu Admin memantau informasi transaksi, status pembayaran, dan persetujuan penarikan dana (withdraw) pengguna.',
     features: [
-      'Slicing UI Design to Website',
-      'API integration',
-      'Discussing a library to be used',
-      'Push to Git Github repository',
+      'Slicing UI Design ke Website',
+      'API Integration',
+      'Mendiskusikan library yang akan digunakan',
+      'Push ke repositori GitHub',
     ],
     stacks: ['React JS', 'Axios', 'Ant Design'],
     image: '',
@@ -376,43 +394,68 @@ export const id: Translation = {
   },
   {
     id: '6',
+    date:'2021',
+
     slug: 'queue-management-system',
     title: 'Queue Management System',
     type: 'personal',
     role: 'Frontend Developer',
     description:
-      'Final project for the Front End Bootcamp Digital Talent Kominfo, a scholarship program in collaboration with some of the biggest banks in Indonesia. Built with 2 other friends, this website helps banking customers order queue tickets to get banking services.',
+      'Proyek akhir untuk Front End Bootcamp Digital Talent Kominfo (beasiswa hasil kolaborasi dengan beberapa bank terbesar di Indonesia). Dibuat bersama 2 rekan tim, platform ini membantu nasabah bank memesan tiket antrean layanan perbankan secara online.',
     features: [
-      'Arrange dividing task for development to my team and discuss about what the feature should we build',
-      'Slicing UI Design to Website',
-      'Discussing a library to be used',
-      'Make sure all the communication is effective',
-      'Push to Git repository',
-      'Work in tandem with other developers to resolve task on time',
-      'Deploy website to public using Vercel',
+      'Mengatur pembagian tugas pengembangan dalam tim dan mendiskusikan fitur yang akan dibangun',
+      'Slicing UI Design ke Website',
+      'Mendiskusikan library yang akan digunakan',
+      'Memastikan komunikasi tim berjalan efektif',
+      'Push ke repositori Git',
+      'Bekerja sama dengan developer lain untuk menyelesaikan tugas tepat waktu',
+      'Deploy website ke publik menggunakan Vercel',
     ],
     stacks: ['React JS', 'Axios', 'Bootstrap', 'PWA'],
-    image: Project2,
+    image: '',
     liveUrl: '',
     caseStudyUrl: '',
   },
   {
     id: '7',
+    date:'2025',
+
     slug: 'restaurant-shop-website',
     title: 'Restaurant Shop Website',
     type: 'professional',
     role: 'Frontend Developer',
     description:
-      'A website to help a seller sell their food products online, where customers can also order directly in the restaurant. This app gives information for transactions, cooking time, and the customer table.',
+      'Aplikasi web untuk membantu pemilik restoran menjual produk makanan secara online maupun pemesanan langsung di tempat. Sistem ini memberikan informasi transaksi, estimasi waktu memasak, dan nomor meja pelanggan.',
     features: [
-      'Slicing UI Design to Website',
-      'API integration',
-      'Discussing a library to be used',
-      'Push to Git Github repository',
-      'Work in tandem with other developers to resolve task on time or ask for help or offering help to others if my task have done',
+      'Slicing UI Design ke Website',
+      'API Integration',
+      'Mendiskusikan library yang akan digunakan',
+      'Push ke repositori GitHub',
+      'Bekerja sama dengan developer lain untuk menyelesaikan tugas tepat waktu dan saling membantu dalam tim',
     ],
     stacks: ['React JS', 'Axios', 'Ant Design', 'Javascript', 'RedwoodJS'],
     image: Project3,
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '8',
+    date:'2025',
+
+    slug: 'landing-page-sidasafe',
+    title: 'Landing Page SidaSafe',
+    type: 'personal',
+    role: 'Frontend Developer',
+    description:
+      'Sebuah landing page responsif untuk SidaSafe, perusahaan transportasi. Situs web ini dirancang untuk menampilkan layanan perusahaan, keunggulan armada, fitur utama, dan profil korporat untuk memberikan pengalaman yang informatif bagi calon klien.',
+    features: [
+      'Desain Web Responsif',
+      'Slicing UI Design',
+      'Hero Section Interaktif & Tampilan Layanan',
+      'Integrasi Formulir Kontak & Pertanyaan',
+    ],
+    stacks: ['HTML5', 'CSS3', 'Javascript'],
+    image: Project2,
     liveUrl: '',
     caseStudyUrl: '',
   },
