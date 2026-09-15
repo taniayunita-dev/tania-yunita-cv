@@ -19,7 +19,7 @@ export function Section({
     description,
 }: SectionProps) {
     return (
-        <section id={id} className={`py-20 sm:py-24 lg:py-32 ${className}`}>
+        <section id={id} className={`py-8 sm:py-10 lg:py-10 ${className}`}>
             <Container>
                 {(eyebrow || title || description) && (
                     <header className="mb-12 max-w-2xl">

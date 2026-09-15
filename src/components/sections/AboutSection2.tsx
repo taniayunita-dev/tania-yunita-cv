@@ -32,7 +32,7 @@ export function About() {
         <section
             id="about"
             aria-labelledby="about-title"
-            className="pb-20 pt-0 sm:py-0 lg:py-32"
+            className="pt-0 sm:py-0 lg:py-10"
         >
             <Container>
                 <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm ">
@@ -100,7 +100,7 @@ export function About() {
                                 <h2
                                     id="about-title"
                                     className={[
-                                        'mt-7',
+                                        'mt-7 duration-600 taos:translate-y-full taos:opacity-0" data-taos-offset="300"',
                                         'text-4xl font-semibold tracking-[-0.04em]',
                                         'sm:text-5xl',
                                     ].join(' ')}

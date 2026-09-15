@@ -454,6 +454,26 @@ export const en: Translation = {
     liveUrl: '',
     caseStudyUrl: '',
   },
+  {
+    id: '3',
+    date:'2026',
+    slug: 'recipe-meal-planner-app',
+    title: 'Recipe & Meal Planner App',
+    type: 'personal',
+    role: 'Frontend Developer',
+    description:
+      'A personal web application designed to help users find recipes based on ingredients they already have at home or by recipe name. Features include saving favorite recipes and building customized weekly meal plans to simplify everyday cooking.',
+    features: [
+      'Ingredient-based & Keyword Recipe Search',
+      'Saved / Favorite Recipes Management',
+      'Interactive Weekly Meal Planner',
+      'Responsive UI & Interactive State Management',
+    ],
+    stacks: ['React JS', 'Tailwind CSS', 'TypeScript', 'Context API', 'Axios'], // Sesuaikan stack yang kamu pakai
+    image: Project3, // Pastikan variabel image di-import
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
     ]
   },
   contact: {

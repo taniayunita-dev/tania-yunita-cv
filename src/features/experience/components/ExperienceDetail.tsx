@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { Badge } from "@/components/ui/Badge";
 import { getCompanyInitials } from "@/libs/getCompanyInitial";
+import { useTranslation } from "@/hooks/useTranslation";
 interface ExperienceDetailProps {
     experience: Translation['experience']['items'][number];
 }
@@ -13,6 +14,8 @@ interface ExperienceDetailProps {
 export function ExperienceDetail({
     experience,
 }: ExperienceDetailProps) {
+
+    const { language } = useTranslation();
 
 
     return (
@@ -104,7 +107,7 @@ export function ExperienceDetail({
                 {/* Responsibilities */}
                 <div className="mt-8 border-t border-border pt-7">
                     <h4 className="text-sm font-semibold text-foreground">
-                        Key Responsibilities
+                        {language === 'en' ? 'Key Responsibilities' : 'Tanggung Jawab Utama'}
                     </h4>
 
                     <ul className="mt-5 space-y-4">
@@ -145,7 +148,8 @@ export function ExperienceDetail({
                 {/* Technologies */}
                 <div className="mt-8 border-t border-border pt-7">
                     <h4 className="text-sm font-semibold text-foreground">
-                        Technologies &amp; Tools
+
+                        {language === 'en' ? <>Technologies &amp; Tools</> : 'Teknologi'}
                     </h4>
 
                     <div className="mt-4 flex flex-wrap gap-2">

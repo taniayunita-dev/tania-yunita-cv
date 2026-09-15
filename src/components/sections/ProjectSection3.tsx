@@ -136,8 +136,8 @@ function ProjectCard({
                         ].join(' ')}
                     >
                         {isProfessional
-                            ? 'Professional Experience'
-                            : 'Personal Case Study'}
+                            ? 'Professional'
+                            : 'Personal'}
                     </span>
 
                     {/* {isProfessional && (
@@ -238,7 +238,7 @@ function ProjectCard({
 }
 
 export function Projects() {
-    const { t } = useTranslation();
+    const { t, language } = useTranslation();
 
     const projects = t.projects.items;
     return (
@@ -297,10 +297,10 @@ export function Projects() {
                         className={[
                             'text-xs font-semibold',
                             'uppercase tracking-[0.2em]',
-                            'text-cyan-400',
+                            'text-green-400',
                         ].join(' ')}
                     >
-                        Projects
+                        {language == 'en' ? 'Projects' : 'Proyek'}
                     </p>
 
                     <h2
@@ -314,17 +314,17 @@ export function Projects() {
                             'lg:text-6xl',
                         ].join(' ')}
                     >
-                        Featured{' '}
+                        {language == 'en' ? 'Featured' : 'Proyek'}  {' '}
                         <span
                             className={[
                                 'bg-gradient-to-r',
-                                'from-cyan-400',
-                                'to-indigo-400',
+                                'from-green-400',
+                                'to-yellow-500',
                                 'bg-clip-text',
                                 'text-transparent',
                             ].join(' ')}
                         >
-                            Projects
+                            {language == 'en' ? 'Projects' : 'Pilihan'}
                         </span>
                     </h2>
 
@@ -349,9 +349,7 @@ export function Projects() {
                             'sm:text-base sm:leading-7',
                         ].join(' ')}
                     >
-                        A selection of projects I’ve built and
-                        contributed to, showcasing practical frontend
-                        development and user-focused interfaces.
+                        {t.projects.subheading}
                     </p>
                 </div>
 

@@ -11,7 +11,7 @@ export function HowIBuild() {
         <section
             id="skills"
             aria-labelledby="how-i-build-title"
-            className="relative overflow-hidden bg-card py-20 sm:py-24 lg:py-32"
+            className="relative overflow-hidden bg-card py-8 sm:py-10 lg:py-10"
         >
             <Container>
                 <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">

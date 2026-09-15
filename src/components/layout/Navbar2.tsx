@@ -233,20 +233,10 @@ export function Navbar() {
                                             key={item.href}
                                             href={item.href}
                                             onClick={handleNavClick}
-                                            className={
-                                                isContact
-                                                    ? [
-                                                        'mt-1 flex items-center justify-between',
-                                                        'rounded-xl bg-primary px-4 py-3',
-                                                        'text-sm font-medium text-primary-foreground',
-                                                    ].join(' ')
-                                                    : [
-                                                        'rounded-xl px-4 py-3',
-                                                        'text-sm font-medium text-muted-foreground',
-                                                        'transition-colors duration-200',
-                                                        'hover:bg-card hover:text-foreground capitalize',
-                                                    ].join(' ')
-                                            }
+                                            className={` animate-[experience-item-in_450ms_ease-out_both] rounded-xl motion-reduce:animate-none px-4 py-3 text-sm font-medium ${isContact
+                                                ? 'mt-1 flex items-center justify-between bg-primary text-primary-foreground'
+                                                : 'text-muted-foreground transition-colors duration-200 hover:bg-card hover:text-foreground capitalize'
+                                                }`}
                                         >
                                             <span>{t.nav[item.key]}</span>
 

@@ -193,12 +193,14 @@ export function LanguageSwitcher({
                         'p-2',
                         'shadow-xl shadow-black/10',
 
+
                         mobile
                             ? 'right-0 top-[calc(100%+8px)]'
                             : 'right-0 top-[calc(100%+8px)]',
                     ].join(' ')}
+
                 >
-                    {languages.map((item) => {
+                    {languages.map((item, index) => {
                         const isActive = item.value === language;
 
                         return (
@@ -217,10 +219,15 @@ export function LanguageSwitcher({
                                     'rounded-lg px-3 py-3',
                                     'text-left',
                                     'transition-colors duration-150',
+                                    'animate-[experience-item-in_450ms_ease-out_both]',
+                                    'motion-reduce:animate-none',
                                     isActive
                                         ? 'bg-accent/5'
                                         : 'hover:bg-muted/10',
                                 ].join(' ')}
+                                style={{
+                                    animationDelay: `${index * 70 + 80}ms`,
+                                }}
                             >
                                 <span
                                     className="text-xl leading-none"

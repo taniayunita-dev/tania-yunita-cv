@@ -14,7 +14,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 // ];
 
 export function HeroSection3() {
-    const { t } = useTranslation();
+    const { t, language } = useTranslation();
     return (
         <section
             aria-labelledby="hero-title"
@@ -62,13 +62,13 @@ export function HeroSection3() {
             />
 
             <Container className="relative">
-                <div className="grid min-h-screen items-center lg:grid-cols-[1.4fr_0.6fr]">
+                <div className="grid min-h-screen items-center lg:grid-cols-[1.3fr_0.7fr]">
                     {/* =================================================
               LEFT — CONTENT
               ================================================= */}
-                    <div className="relative z-10 pt-32 ssm:pt-36 lg:py-32">
+                    <div className="relative z-10 pt-32 sm:pt-36 lg:py-32">
                         {/* Eyebrow */}
-                        <p className="mb-6 text-sm font-semibold animate-fade-in-up animate-duration-1000 tracking-[0.18em] text-accent uppercase">
+                        <p className="mb-6 text-sm font-semibold animate-fade-in-up animate-duration-900 tracking-[0.18em] text-accent uppercase">
                             {t.hero.eyebrow}
                         </p>
 
@@ -76,24 +76,30 @@ export function HeroSection3() {
                         <h1
                             id="hero-title"
                             className={[
-                                'max-w-2xl animate-fade-in-up animate-duration-1000 animate-delay-300',
-                                'text-4xl font-semibold',
+                                'max-w-2xl animate-fade-in-up animate-duration-1000 animate-delay-400',
+                                'text-6xl font-semibold',
                                 'leading-[1.05]',
                                 'tracking-[-0.045em]',
                                 'text-foreground',
                                 'sm:text-5xl',
                                 'md:text-6xl',
-                                'lg:text-[4rem]',
-                                'xl:text-[4.5rem]',
+                                'lg:text-[6rem]',
+                                'xl:text-[6.3rem] font-instrument-serif',
                             ].join(' ')}
                         >
-                            {t.hero.headline}
+                            {/* {t.hero.headline} */}
+
+                            {language === 'en' ?
+                                (<>I leverage AI <br></br> <em className='text-accent'> to build fast</em> <br></br> and solid fundamentals <br></br> <em className='text-accent'>to build right.</em></>) :
+                                (<>Saya memanfaatkan <br></br> AI  untuk membangun <br></br><em className='text-accent'>dengan cepat</em> <br></br> dan fundamental <br></br> yang  kuat untuk membangun <br></br> <em className='text-accent'>dengan tepat.</em></>)
+
+                            }
                         </h1>
 
                         {/* Description */}
                         <p
                             className={[
-                                'mt-7 max-w-xl animate-fade-in-up animate-duration-1000',
+                                'mt-7 max-w-xl animate-fade-in-up animate-duration-1000 animate-delay-700',
                                 'text-base leading-7',
                                 'text-muted-foreground',
                                 'sm:text-lg sm:leading-8',
@@ -189,7 +195,7 @@ export function HeroSection3() {
                             className={[
                                 'pointer-events-none absolute',
                                 'bottom-10 right-[15%]',
-                                'h-72 w-72',
+                                'h-72 w-60',
                                 'rounded-full',
                                 'bg-accent/10',
                                 'blur-3xl',
@@ -205,7 +211,7 @@ export function HeroSection3() {
                                 'lg:h-[700px]',
                                 'xl:h-[760px]',
                                 'lg:w-[620px]',
-                                'xl:w-[680px]',
+                                'xl:w-[600px]',
                             ].join(' ')}
                         >
                             <img

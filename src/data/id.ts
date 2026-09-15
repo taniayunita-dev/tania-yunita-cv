@@ -24,8 +24,8 @@ export const id: Translation = {
   nav: {
     about: 'Tentang',
     experience: 'Pengalaman',
-    projects: 'Projects',
-    skills: 'Skills',
+    projects: 'Proyek',
+    skills: 'Keahlian',
     contact: 'Kontak',
   },
 hero: {
@@ -456,6 +456,26 @@ hero: {
     ],
     stacks: ['HTML5', 'CSS3', 'Javascript'],
     image: Project2,
+    liveUrl: '',
+    caseStudyUrl: '',
+  },
+  {
+    id: '9',
+    date:'2026',
+    slug: 'recipe-meal-planner-app',
+    title: 'Aplikasi Resep & Meal Planner',
+    type: 'personal',
+    role: 'Frontend Developer',
+    description:
+      'Aplikasi web personal yang dirancang untuk membantu pengguna menemukan resep berdasarkan bahan makanan yang ada di rumah maupun nama resep. Dilengkapi fitur untuk menyimpan resep favorit dan menyusun jadwal makan mingguan (meal plan) secara praktis.',
+    features: [
+      'Pencarian Resep Berdasarkan Bahan & Nama',
+      'Manajemen Resep Favorit / Simpan Resep',
+      'Perencana Jadwal Makan (Meal Planner) Interaktif',
+      'UI Responsif & Manajemen State Interaktif',
+    ],
+    stacks: ['React JS', 'Tailwind CSS', 'TypeScript', 'Context API', 'Axios'],
+    image: Project3,
     liveUrl: '',
     caseStudyUrl: '',
   },
