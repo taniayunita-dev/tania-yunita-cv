@@ -388,24 +388,25 @@ export function Projects() {
                                 'lg:gap-6',
                             ].join(' ')}
                         >
-                            {projects.map((project, index) => (
-                                <div
-                                    key={project.slug}
-                                    className={[
-                                        'w-[82vw]',
-                                        'max-w-[330px]',
-                                        'shrink-0',
-                                        'snap-start',
-                                        'sm:w-auto',
-                                        'sm:max-w-none',
-                                    ].join(' ')}
-                                >
-                                    <ProjectCard
-                                        project={project}
-                                        index={index}
-                                    />
-                                </div>
-                            ))}
+                            {[...projects]
+                                .sort((a, b) => Number(b.date) - Number(a.date)).map((project, index) => (
+                                    <div
+                                        key={project.slug}
+                                        className={[
+                                            'w-[82vw]',
+                                            'max-w-[330px]',
+                                            'shrink-0',
+                                            'snap-start',
+                                            'sm:w-auto',
+                                            'sm:max-w-none',
+                                        ].join(' ')}
+                                    >
+                                        <ProjectCard
+                                            project={project}
+                                            index={index}
+                                        />
+                                    </div>
+                                ))}
                         </div>
                     </div>
                 </div>
