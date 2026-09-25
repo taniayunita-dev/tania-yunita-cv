@@ -251,7 +251,7 @@ hero: {
         description:
           "Jeda karier yang direncanakan untuk fokus pada tanggung jawab pribadi, sambil terus menjaga dan mengembangkan kemampuan frontend engineering.",
         company: "Career Break",
-        period: "Juli 2025 – Juli 2026",
+        period: "Juli 2025 – september 2026",
         note:
           "Terus belajar dan membangun proyek frontend secara mandiri untuk tetap mengikuti praktik pengembangan frontend modern.",
         responsibilities: [
@@ -475,7 +475,7 @@ hero: {
       'UI Responsif & Manajemen State Interaktif',
     ],
     stacks: ['React JS', 'Tailwind CSS', 'TypeScript', 'Context API', 'Axios'],
-    image: Project3,
+    image: '',
     liveUrl: '',
     caseStudyUrl: '',
   },

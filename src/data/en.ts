@@ -254,7 +254,7 @@ export const en: Translation = {
     description:
       "A planned career break focused on personal responsibilities while continuing to maintain and develop frontend engineering skills.",
     company: "Career Break",
-    period: "July 2025 – July 2026",
+    period: "July 2025 – Sept 2026",
     note:
       "Continued learning and building frontend projects independently to stay connected with modern frontend development practices.",
     responsibilities: [
@@ -470,7 +470,7 @@ export const en: Translation = {
       'Responsive UI & Interactive State Management',
     ],
     stacks: ['React JS', 'Tailwind CSS', 'TypeScript', 'Context API', 'Axios'], // Sesuaikan stack yang kamu pakai
-    image: Project3, // Pastikan variabel image di-import
+    image: '', // Pastikan variabel image di-import
     liveUrl: '',
     caseStudyUrl: '',
   },
