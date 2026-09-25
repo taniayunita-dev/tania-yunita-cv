@@ -15,6 +15,10 @@ import { useTranslation } from '@/hooks/useTranslation';
 
 export function HeroSection3() {
     const { t, language } = useTranslation();
+    // const resumeUrl = {
+    //     en: '/resume/Tania_Yunita_Resume_EN.pdf',
+    //     id: '/resume/Tania-Yunita-Frontend-Developer-Resume-ID.pdf',
+    // };
     return (
         <section
             aria-labelledby="hero-title"
@@ -137,7 +141,7 @@ export function HeroSection3() {
                             </ButtonLink>
 
                             <ButtonLink
-                                href="#contact"
+                                href="/resume/Tania_Yunita_Resume_EN.pdf"
                                 variant="secondary"
                                 size="lg"
                                 className={[

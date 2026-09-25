@@ -35,7 +35,7 @@ hero: {
     subtext:
       'Frontend Developer dengan pengalaman 3+ tahun dalam membangun aplikasi web yang mudah dirawat dan menghadirkan pengalaman pengguna yang andal menggunakan React dan TypeScript.',
     cta1: 'Lihat karya saya',
-    cta2: 'Hubungi saya',
+    cta2: 'Lihat CV saya',
     credibilities: ['Pengalaman 3+ Tahun', 'React', 'TypeScript', 'API Integration']
 },
   about: {

@@ -36,7 +36,7 @@ export const en: Translation = {
     subtext:
       'Frontend Developer with 3+ years of experience building maintainable web applications with reliable user experiences using React and TypeScript.',
     cta1: 'View my work',
-    cta2: 'Contact me',
+    cta2: 'View my resume',
     credibilities:['3+ Years Experience','React','TypeScript','API Integration' ]
   },
   about: {
